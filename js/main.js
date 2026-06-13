@@ -49,7 +49,7 @@ document.querySelectorAll('#navLinks a').forEach(a => {
 // ── Scroll reveal ──────────────────────────────────────────────
 const revealObs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObs.unobserve(e.target); } });
-}, { threshold: 0.12 });
+}, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
 document.querySelectorAll('.sr, .sr-l, .sr-r').forEach(el => revealObs.observe(el));
 
 // ── Counter animation ──────────────────────────────────────────

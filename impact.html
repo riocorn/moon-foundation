@@ -1,204 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Our Impact – MOON Foundation</title>
-  <meta name="description" content="See the measurable impact MOON Foundation has created — villages served, lives changed, animals rescued, and trees planted." />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/animations.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="See the measurable impact MOON Foundation has created — villages served, lives changed, animals rescued, and trees planted."/>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav id="navbar" class="scrolled">
-    <div class="nav-container">
-      <a href="index.html" class="nav-brand"><div class="brand-logo"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#2ecc71" stroke-width="2" opacity="0.4"/><path d="M24 4 A20 20 0 1 1 4 24 A15 15 0 1 0 24 4 Z" fill="#2ecc71"/></svg></div><div class="brand-text"><span class="brand-name">MOON</span><span class="brand-tagline">Foundation</span></div></a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
-        <li class="dropdown"><a href="programs.html">Programs <span class="arrow">▾</span></a><ul class="dropdown-menu"><li><a href="programs.html#healthcare">Rural Healthcare</a></li><li><a href="programs.html#maternal">Maternal & Child</a></li><li><a href="programs.html#animal">Animal Welfare</a></li><li><a href="programs.html#trees">Tree Plantation</a></li></ul></li>
-        <li><a href="impact.html" class="active">Impact</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html" class="btn-donate">Donate Now</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-    </div>
-  </nav>
+<!-- NAVBAR -->
+<nav id="nav" class="scrolled">
+  <div class="container"><div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <svg viewBox="0 0 44 44" fill="none" style="width:44px;height:44px;border-radius:10px;background:#0f172a"><path d="M24 5 A12 12 0 1 1 5 22 A8 8 0 1 0 24 5Z" fill="#22c55e"/><rect x="19.5" y="30" width="5" height="11" rx="1.5" fill="white"/><rect x="14" y="34" width="16" height="4" rx="1.5" fill="white"/></svg>
+      <div class="nav-logo-text"><span class="name">MOON</span><span class="tag">Foundation</span></div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+      <li class="nav-drop"><a href="programs.html">Programs</a><ul class="drop-menu"><li><a href="programs.html#healthcare">Rural Healthcare</a></li><li><a href="programs.html#maternal">Maternal & Child</a></li><li><a href="programs.html#animal">Animal Welfare</a></li><li><a href="programs.html#trees">Tree Plantation</a></li></ul></li>
+      <li><a href="impact.html" class="active">Impact</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li>
+      <li><a href="donate.html" class="btn btn-primary nav-donate">Donate Now</a></li>
+    </ul>
+    <button class="hamburger" id="hbg" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div></div>
+</nav>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Our Impact</div>
-      <h1>Our <span class="gradient-text">Impact</span></h1>
-      <p>Numbers tell part of the story. Behind each one is a life changed, a family strengthened, an animal saved, or a tree taking root.</p>
-    </div>
-  </section>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container" style="text-align:center">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Our Impact</div>
+    <h1>Our <span class="highlight">Impact</span></h1>
+    <p>Numbers tell part of the story. Behind each one is a life changed, a family strengthened, an animal saved, or a tree taking root.</p>
+  </div>
+</section>
 
-  <!-- IMPACT STRIP -->
-  <section class="impact-strip">
-    <div class="container">
-      <div class="impact-strip-inner">
-        <div class="impact-item"><span class="impact-num" data-target="84">0</span><span class="impact-unit">+</span><p>Villages Served</p></div>
-        <div class="impact-div"></div>
-        <div class="impact-item"><span class="impact-num" data-target="12000">0</span><span class="impact-unit">+</span><p>Patients Treated</p></div>
-        <div class="impact-div"></div>
-        <div class="impact-item"><span class="impact-num" data-target="1800">0</span><span class="impact-unit">+</span><p>Mothers Supported</p></div>
-        <div class="impact-div"></div>
-        <div class="impact-item"><span class="impact-num" data-target="5000">0</span><span class="impact-unit">+</span><p>Trees Planted</p></div>
-        <div class="impact-div"></div>
-        <div class="impact-item"><span class="impact-num" data-target="320">0</span><span class="impact-unit">+</span><p>Animals Rescued</p></div>
-      </div>
+<!-- STATS STRIP -->
+<div class="stats-strip-light">
+  <div class="container">
+    <div class="stats-strip-inner">
+      <div class="stat-block"><span class="n"><span data-target="84">0</span><sup>+</sup></span><span class="l">Villages Served</span></div>
+      <div class="stat-sep-v"></div>
+      <div class="stat-block"><span class="n"><span data-target="12000">0</span><sup>+</sup></span><span class="l">Patients Treated</span></div>
+      <div class="stat-sep-v"></div>
+      <div class="stat-block"><span class="n"><span data-target="1800">0</span><sup>+</sup></span><span class="l">Mothers Supported</span></div>
+      <div class="stat-sep-v"></div>
+      <div class="stat-block"><span class="n"><span data-target="5000">0</span><sup>+</sup></span><span class="l">Trees Planted</span></div>
+      <div class="stat-sep-v"></div>
+      <div class="stat-block"><span class="n"><span data-target="320">0</span><sup>+</sup></span><span class="l">Animals Rescued</span></div>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- IMPACT BREAKDOWN -->
-  <section class="section-pad">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Impact Breakdown</span>
-        <h2>Program-wise <span class="gradient-text">Results</span></h2>
-      </div>
-      <div class="impact-grid">
-        <div class="impact-card reveal delay-1">
-          <div class="impact-card-icon">🏥</div>
-          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:16px;color:var(--navy)">Rural Healthcare</h3>
-          <div>
-            <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">Patients Treated</span><span style="font-weight:700;color:var(--navy)">12,000+</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:85%"></div></div>
-            <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">Villages Covered</span><span style="font-weight:700;color:var(--navy)">84+</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:70%"></div></div>
-            <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">Camps Conducted</span><span style="font-weight:700;color:var(--navy)">48</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:60%"></div></div>
-          </div>
-        </div>
-        <div class="impact-card reveal delay-2">
-          <div class="impact-card-icon">👶</div>
-          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:16px;color:var(--navy)">Maternal & Child</h3>
-          <div>
-            <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">Mothers Supported</span><span style="font-weight:700;color:var(--navy)">1,800+</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:78%;background:linear-gradient(90deg,#e74c8b,#c0185e)"></div></div>
-            <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">Safe Deliveries</span><span style="font-weight:700;color:var(--navy)">600+</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:65%;background:linear-gradient(90deg,#e74c8b,#c0185e)"></div></div>
-            <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">Children Vaccinated</span><span style="font-weight:700;color:var(--navy)">2,400+</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:90%;background:linear-gradient(90deg,#e74c8b,#c0185e)"></div></div>
-          </div>
-        </div>
-        <div class="impact-card reveal delay-3">
-          <div class="impact-card-icon">🐾</div>
-          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:16px;color:var(--navy)">Animal Welfare</h3>
-          <div>
-            <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">Animals Rescued</span><span style="font-weight:700;color:var(--navy)">320+</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:55%;background:linear-gradient(90deg,#f39c12,#e67e22)"></div></div>
-            <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">Vaccinated</span><span style="font-weight:700;color:var(--navy)">850+</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:72%;background:linear-gradient(90deg,#f39c12,#e67e22)"></div></div>
-            <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">Adopted</span><span style="font-weight:700;color:var(--navy)">120+</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:40%;background:linear-gradient(90deg,#f39c12,#e67e22)"></div></div>
-          </div>
-        </div>
-        <div class="impact-card reveal delay-1">
-          <div class="impact-card-icon">🌳</div>
-          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:16px;color:var(--navy)">Tree Plantation</h3>
-          <div>
-            <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">Trees Planted</span><span style="font-weight:700;color:var(--navy)">5,000+</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:80%;background:linear-gradient(90deg,#27ae60,#1e8449)"></div></div>
-            <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">Schools Covered</span><span style="font-weight:700;color:var(--navy)">24</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:50%;background:linear-gradient(90deg,#27ae60,#1e8449)"></div></div>
-            <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">Survival Rate</span><span style="font-weight:700;color:var(--navy)">85%</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:85%;background:linear-gradient(90deg,#27ae60,#1e8449)"></div></div>
-          </div>
-        </div>
-        <div class="impact-card reveal delay-2">
-          <div class="impact-card-icon">🤝</div>
-          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:16px;color:var(--navy)">Volunteers & Partners</h3>
-          <div>
-            <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">Active Volunteers</span><span style="font-weight:700;color:var(--navy)">240+</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:65%"></div></div>
-            <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">Partner Organisations</span><span style="font-weight:700;color:var(--navy)">18</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:45%"></div></div>
-            <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">Doctors Engaged</span><span style="font-weight:700;color:var(--navy)">60+</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:55%"></div></div>
-          </div>
-        </div>
-        <div class="impact-card reveal delay-3">
-          <div class="impact-card-icon">📅</div>
-          <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:16px;color:var(--navy)">Year-wise Growth</h3>
-          <div>
-            <div style="display:flex;justify-content:space-between;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">2021 – Foundation Year</span><span style="font-weight:700;color:var(--navy)">3 Camps</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:15%"></div></div>
-            <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">2022 – Expansion</span><span style="font-weight:700;color:var(--navy)">12 Camps</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:35%"></div></div>
-            <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:4px"><span style="font-size:0.85rem;color:var(--text-light)">2023–25 – Scale-up</span><span style="font-weight:700;color:var(--navy)">33 Camps</span></div>
-            <div class="progress-bar"><div class="progress-fill" style="--pct:85%"></div></div>
-          </div>
+<!-- PROGRAM IMPACT BREAKDOWN -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Program-wise Results</span>
+      <h2 class="section-title">What We've <span class="highlight">Achieved</span></h2>
+      <p class="section-sub">Every number represents real people, real communities, and real change on the ground across Uttar Pradesh.</p>
+    </div>
+    <div class="impact-grid">
+
+      <div class="impact-card sr d1">
+        <div class="impact-card-icon" style="background:#dcfce7"><svg fill="none" viewBox="0 0 24 24" stroke="#16a34a" stroke-width="2"><rect x="8" y="2" width="8" height="20" rx="3"/><rect x="2" y="8" width="20" height="8" rx="3"/></svg></div>
+        <h3>12,000+</h3>
+        <p style="font-weight:700;color:var(--navy);margin-bottom:16px">Rural Healthcare</p>
+        <div style="font-size:.84rem;color:var(--mid)">
+          <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span>Patients Treated</span><span style="font-weight:700;color:var(--navy)">12,000+</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="85%"></div></div>
+          <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:5px"><span>Villages Covered</span><span style="font-weight:700;color:var(--navy)">84+</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="70%"></div></div>
+          <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:5px"><span>Camps Conducted</span><span style="font-weight:700;color:var(--navy)">48</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="60%"></div></div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- FUND UTILISATION -->
-  <section class="section-pad bg-light">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Transparency</span>
-        <h2>How We Use <span class="gradient-text">Your Donation</span></h2>
-        <p>Every rupee counts. We are committed to maximum impact with minimum overhead.</p>
+      <div class="impact-card sr d2">
+        <div class="impact-card-icon" style="background:#fce7f3"><svg fill="none" viewBox="0 0 24 24" stroke="#db2777" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M7 19q5 3 10 0"/></svg></div>
+        <h3 style="color:#db2777">1,800+</h3>
+        <p style="font-weight:700;color:var(--navy);margin-bottom:16px">Maternal & Child Health</p>
+        <div style="font-size:.84rem;color:var(--mid)">
+          <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span>Mothers Supported</span><span style="font-weight:700;color:var(--navy)">1,800+</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="78%" style="background:linear-gradient(90deg,#db2777,#be185d)"></div></div>
+          <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:5px"><span>Safe Deliveries</span><span style="font-weight:700;color:var(--navy)">600+</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="65%" style="background:linear-gradient(90deg,#db2777,#be185d)"></div></div>
+          <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:5px"><span>Children Vaccinated</span><span style="font-weight:700;color:var(--navy)">2,400+</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="90%" style="background:linear-gradient(90deg,#db2777,#be185d)"></div></div>
+        </div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center">
+
+      <div class="impact-card sr d3">
+        <div class="impact-card-icon" style="background:#fef3c7"><svg fill="none" viewBox="0 0 24 24" stroke="#d97706" stroke-width="2"><path d="M10 12a4 4 0 01-4-4M14 12a4 4 0 004-4M6 19c2-3 10-3 12 0"/></svg></div>
+        <h3 style="color:#d97706">320+</h3>
+        <p style="font-weight:700;color:var(--navy);margin-bottom:16px">Animal Welfare</p>
+        <div style="font-size:.84rem;color:var(--mid)">
+          <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span>Animals Rescued</span><span style="font-weight:700;color:var(--navy)">320+</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="55%" style="background:linear-gradient(90deg,#d97706,#b45309)"></div></div>
+          <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:5px"><span>Vaccinated</span><span style="font-weight:700;color:var(--navy)">850+</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="72%" style="background:linear-gradient(90deg,#d97706,#b45309)"></div></div>
+          <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:5px"><span>Adopted</span><span style="font-weight:700;color:var(--navy)">120+</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="40%" style="background:linear-gradient(90deg,#d97706,#b45309)"></div></div>
+        </div>
+      </div>
+
+      <div class="impact-card sr d1">
+        <div class="impact-card-icon" style="background:#dcfce7"><svg fill="none" viewBox="0 0 24 24" stroke="#16a34a" stroke-width="2"><path d="M12 3L19 10H14.5L18 18H13V21H11V18H6L9.5 10H5Z"/></svg></div>
+        <h3>5,000+</h3>
+        <p style="font-weight:700;color:var(--navy);margin-bottom:16px">Tree Plantation</p>
+        <div style="font-size:.84rem;color:var(--mid)">
+          <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span>Trees Planted</span><span style="font-weight:700;color:var(--navy)">5,000+</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="80%"></div></div>
+          <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:5px"><span>Schools Covered</span><span style="font-weight:700;color:var(--navy)">24</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="50%"></div></div>
+          <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:5px"><span>Survival Rate</span><span style="font-weight:700;color:var(--navy)">85%</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="85%"></div></div>
+        </div>
+      </div>
+
+      <div class="impact-card sr d2">
+        <div class="impact-card-icon" style="background:#ede9fe"><svg fill="none" viewBox="0 0 24 24" stroke="#7c3aed" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <h3 style="color:#7c3aed">240+</h3>
+        <p style="font-weight:700;color:var(--navy);margin-bottom:16px">Volunteers & Partners</p>
+        <div style="font-size:.84rem;color:var(--mid)">
+          <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span>Active Volunteers</span><span style="font-weight:700;color:var(--navy)">240+</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="65%" style="background:linear-gradient(90deg,#7c3aed,#6d28d9)"></div></div>
+          <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:5px"><span>Partner Organisations</span><span style="font-weight:700;color:var(--navy)">18</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="45%" style="background:linear-gradient(90deg,#7c3aed,#6d28d9)"></div></div>
+          <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:5px"><span>Doctors Engaged</span><span style="font-weight:700;color:var(--navy)">60+</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="55%" style="background:linear-gradient(90deg,#7c3aed,#6d28d9)"></div></div>
+        </div>
+      </div>
+
+      <div class="impact-card sr d3">
+        <div class="impact-card-icon" style="background:#fef3c7"><svg fill="none" viewBox="0 0 24 24" stroke="#d97706" stroke-width="2"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
+        <h3 style="color:#d97706">33+</h3>
+        <p style="font-weight:700;color:var(--navy);margin-bottom:16px">Year-wise Growth</p>
+        <div style="font-size:.84rem;color:var(--mid)">
+          <div style="display:flex;justify-content:space-between;margin-bottom:5px"><span>2021 – Foundation Year</span><span style="font-weight:700;color:var(--navy)">3 Camps</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="15%" style="background:linear-gradient(90deg,#d97706,#b45309)"></div></div>
+          <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:5px"><span>2022–23 – Expansion</span><span style="font-weight:700;color:var(--navy)">12 Camps</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="35%" style="background:linear-gradient(90deg,#d97706,#b45309)"></div></div>
+          <div style="display:flex;justify-content:space-between;margin-top:12px;margin-bottom:5px"><span>2024–26 – Scale-up</span><span style="font-weight:700;color:var(--navy)">33+ Camps</span></div>
+          <div class="prog-bar"><div class="prog-bar-fill" data-w="88%" style="background:linear-gradient(90deg,#d97706,#b45309)"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FUND UTILISATION -->
+<section class="section bg-pale">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Transparency</span>
+      <h2 class="section-title">How We Use <span class="highlight">Your Donation</span></h2>
+      <p class="section-sub">Every rupee counts. We are committed to maximum impact with minimum overhead.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center">
+      <div class="sr-l">
+        <div style="margin-bottom:24px">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="font-weight:600;color:var(--navy)">Direct Program Delivery</span><span style="font-weight:800;font-size:1.1rem;color:var(--green)">78%</span></div>
+          <div class="prog-bar" style="height:10px"><div class="prog-bar-fill" data-w="78%"></div></div>
+        </div>
+        <div style="margin-bottom:24px">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="font-weight:600;color:var(--navy)">Medicines & Supplies</span><span style="font-weight:800;font-size:1.1rem;color:var(--green)">12%</span></div>
+          <div class="prog-bar" style="height:10px"><div class="prog-bar-fill" data-w="12%"></div></div>
+        </div>
+        <div style="margin-bottom:24px">
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="font-weight:600;color:var(--navy)">Administration & Ops</span><span style="font-weight:800;font-size:1.1rem;color:var(--green)">7%</span></div>
+          <div class="prog-bar" style="height:10px"><div class="prog-bar-fill" data-w="7%"></div></div>
+        </div>
         <div>
-          <div style="margin-bottom:20px">
-            <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-weight:600;color:var(--navy)">Direct Program Delivery</span><span style="font-weight:800;color:var(--green)">78%</span></div>
-            <div class="progress-bar" style="height:12px"><div class="progress-fill" style="--pct:78%"></div></div>
-          </div>
-          <div style="margin-bottom:20px">
-            <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-weight:600;color:var(--navy)">Medicines & Supplies</span><span style="font-weight:800;color:var(--green)">12%</span></div>
-            <div class="progress-bar" style="height:12px"><div class="progress-fill" style="--pct:12%"></div></div>
-          </div>
-          <div style="margin-bottom:20px">
-            <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-weight:600;color:var(--navy)">Administration & Ops</span><span style="font-weight:800;color:var(--green)">7%</span></div>
-            <div class="progress-bar" style="height:12px"><div class="progress-fill" style="--pct:7%"></div></div>
-          </div>
-          <div>
-            <div style="display:flex;justify-content:space-between;margin-bottom:6px"><span style="font-weight:600;color:var(--navy)">Awareness & Outreach</span><span style="font-weight:800;color:var(--green)">3%</span></div>
-            <div class="progress-bar" style="height:12px"><div class="progress-fill" style="--pct:3%"></div></div>
-          </div>
+          <div style="display:flex;justify-content:space-between;margin-bottom:8px"><span style="font-weight:600;color:var(--navy)">Awareness & Outreach</span><span style="font-weight:800;font-size:1.1rem;color:var(--green)">3%</span></div>
+          <div class="prog-bar" style="height:10px"><div class="prog-bar-fill" data-w="3%"></div></div>
         </div>
-        <div style="background:#fff;border-radius:var(--radius);border:1px solid var(--border);padding:40px;box-shadow:var(--shadow)">
-          <h3 style="color:var(--navy);margin-bottom:24px;font-size:1.3rem">₹ Impact per 1000 Donated</h3>
-          <div style="display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)">
-            <span style="font-size:1.5rem">💊</span>
-            <div><div style="font-weight:700;color:var(--navy)">Medicines for 20 patients</div><div style="font-size:0.82rem;color:var(--text-light)">Basic medicines, vitamins & OTC drugs</div></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)">
-            <span style="font-size:1.5rem">🌳</span>
-            <div><div style="font-weight:700;color:var(--navy)">20 trees planted & cared for</div><div style="font-size:0.82rem;color:var(--text-light)">Native species with 1-year maintenance</div></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)">
-            <span style="font-size:1.5rem">🐕</span>
-            <div><div style="font-weight:700;color:var(--navy)">2 animals vaccinated</div><div style="font-size:0.82rem;color:var(--text-light)">Anti-rabies + distemper combo</div></div>
-          </div>
-          <div style="display:flex;align-items:center;gap:16px;padding:16px 0">
-            <span style="font-size:1.5rem">👶</span>
-            <div><div style="font-weight:700;color:var(--navy)">1 mother's prenatal kit</div><div style="font-size:0.82rem;color:var(--text-light)">Iron, folic acid, calcium supplements</div></div>
-          </div>
+      </div>
+      <div class="sr-r" style="background:#fff;border-radius:var(--radius-lg);border:1px solid var(--border);padding:40px;box-shadow:var(--shadow)">
+        <h3 style="color:var(--navy);margin-bottom:24px;font-size:1.2rem;font-weight:700">Your ₹1,000 in Action</h3>
+        <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)">
+          <div style="width:44px;height:44px;background:#dcfce7;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg fill="none" viewBox="0 0 24 24" stroke="#16a34a" stroke-width="2" style="width:20px;height:20px"><path d="M4.5 9.5v5m0 0l3-3m-3 3l-3-3M14 4h3a3 3 0 013 3v10a3 3 0 01-3 3H7a3 3 0 01-3-3v-1"/></svg></div>
+          <div><div style="font-weight:700;color:var(--navy);margin-bottom:2px">Medicines for 20 patients</div><div style="font-size:.82rem;color:var(--mid)">Basic medicines, vitamins & OTC drugs</div></div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)">
+          <div style="width:44px;height:44px;background:#dcfce7;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg fill="none" viewBox="0 0 24 24" stroke="#16a34a" stroke-width="2" style="width:20px;height:20px"><path d="M12 3L19 10H14.5L18 18H13V21H11V18H6L9.5 10H5Z"/></svg></div>
+          <div><div style="font-weight:700;color:var(--navy);margin-bottom:2px">20 trees planted & cared for</div><div style="font-size:.82rem;color:var(--mid)">Native species with 1-year maintenance</div></div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border)">
+          <div style="width:44px;height:44px;background:#fef3c7;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg fill="none" viewBox="0 0 24 24" stroke="#d97706" stroke-width="2" style="width:20px;height:20px"><path d="M10 12a4 4 0 01-4-4M14 12a4 4 0 004-4M6 19c2-3 10-3 12 0"/></svg></div>
+          <div><div style="font-weight:700;color:var(--navy);margin-bottom:2px">2 animals vaccinated</div><div style="font-size:.82rem;color:var(--mid)">Anti-rabies + distemper combo</div></div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:16px;padding:16px 0">
+          <div style="width:44px;height:44px;background:#fce7f3;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0"><svg fill="none" viewBox="0 0 24 24" stroke="#db2777" stroke-width="2" style="width:20px;height:20px"><circle cx="12" cy="8" r="5"/><path d="M7 19q5 3 10 0"/></svg></div>
+          <div><div style="font-weight:700;color:var(--navy);margin-bottom:2px">1 mother's prenatal kit</div><div style="font-size:.82rem;color:var(--mid)">Iron, folic acid, calcium supplements</div></div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CTA -->
-  <section class="donate-cta">
-    <div class="container">
-      <div class="donate-cta-inner">
-        <div class="donate-cta-text"><h2>Be Part of Our <span class="gradient-text">Next Milestone</span></h2><p>Help us reach 200 villages, 25,000 patients, and 10,000 trees. Every contribution counts.</p></div>
-        <div class="donate-cta-action"><a href="donate.html" class="btn-primary btn-large">Donate Now</a><a href="contact.html" class="btn-outline-white">Join as Volunteer</a></div>
+<!-- MILESTONES TIMELINE -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Our Journey</span>
+      <h2 class="section-title">Growth <span class="highlight">Timeline</span></h2>
+    </div>
+    <div style="max-width:700px;margin:0 auto">
+      <div style="display:flex;gap:24px;margin-bottom:32px;align-items:flex-start" class="sr">
+        <div style="width:52px;height:52px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:800;color:#16a34a;font-size:.9rem">2020</div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;flex:1;box-shadow:var(--shadow-sm)"><h4 style="color:var(--navy);margin-bottom:6px">Foundation & First Camp</h4><p style="color:var(--mid);font-size:.875rem">MOON Foundation registered. First free health camp in Rampur Village — 87 patients served in a single day.</p></div>
+      </div>
+      <div style="display:flex;gap:24px;margin-bottom:32px;align-items:flex-start" class="sr">
+        <div style="width:52px;height:52px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:800;color:#16a34a;font-size:.9rem">2021</div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;flex:1;box-shadow:var(--shadow-sm)"><h4 style="color:var(--navy);margin-bottom:6px">Maternal Health Program Launch</h4><p style="color:var(--mid);font-size:.875rem">Launched dedicated maternal care drives. Partnered with ASHA workers in 12 villages. 200+ mothers reached in Year 1.</p></div>
+      </div>
+      <div style="display:flex;gap:24px;margin-bottom:32px;align-items:flex-start" class="sr">
+        <div style="width:52px;height:52px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:800;color:#16a34a;font-size:.9rem">2022</div>
+        <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px 24px;flex:1;box-shadow:var(--shadow-sm)"><h4 style="color:var(--navy);margin-bottom:6px">Animal Welfare & Tree Programs</h4><p style="color:var(--mid);font-size:.875rem">Expanded to animal rescue & vaccination. Planted first 500 trees across 5 schools on Independence Day.</p></div>
+      </div>
+      <div style="display:flex;gap:24px;margin-bottom:32px;align-items:flex-start" class="sr">
+        <div style="width:52px;height:52px;background:#16a34a;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:800;color:white;font-size:.9rem">2024</div>
+        <div style="background:#fff;border:1px solid var(--green);border-radius:var(--radius);padding:20px 24px;flex:1;box-shadow:var(--shadow)"><h4 style="color:var(--navy);margin-bottom:6px">Scale-up Across Districts</h4><p style="color:var(--mid);font-size:.875rem">Reached 84+ villages, 12,000+ patients. 240+ volunteers active. 5,000+ trees with 85% survival rate.</p></div>
+      </div>
+      <div style="display:flex;gap:24px;align-items:flex-start" class="sr">
+        <div style="width:52px;height:52px;background:var(--navy);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:800;color:#22c55e;font-size:.85rem">2026</div>
+        <div style="background:linear-gradient(135deg,#0f172a,#16a34a 200%);border-radius:var(--radius);padding:20px 24px;flex:1"><h4 style="color:#fff;margin-bottom:6px">Next Target: 200 Villages</h4><p style="color:rgba(255,255,255,.7);font-size:.875rem">Goal: 200 villages, 25,000 patients, 10,000 trees, and full-district maternal care by end of 2026.</p></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="nav-brand" style="margin-bottom:1rem"><div class="brand-logo"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#2ecc71" stroke-width="2" opacity="0.4"/><path d="M24 4 A20 20 0 1 1 4 24 A15 15 0 1 0 24 4 Z" fill="#2ecc71"/></svg></div><div class="brand-text"><span class="brand-name">MOON</span><span class="brand-tagline">Foundation</span></div></div><p>Making Our Own Nation Healthy.</p><div class="social-links"><a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a></div></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html#healthcare">Rural Healthcare</a></li><li><a href="programs.html#maternal">Maternal & Child</a></li><li><a href="programs.html#animal">Animal Welfare</a></li><li><a href="programs.html#trees">Tree Plantation</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul class="contact-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bareilly, Uttar Pradesh</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@moonfoundation.org</li></ul></div></div><div class="footer-bottom"><p>© 2026 MOON Foundation. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">80G Certificate</a></div></div></div></footer>
+<!-- DONATE CTA -->
+<section class="donate-banner">
+  <div class="donate-banner-bg"></div><div class="donate-banner-overlay"></div>
+  <div class="container">
+    <div class="donate-banner-inner">
+      <div class="donate-banner-text">
+        <span class="eyebrow" style="color:#4ade80">Be Part of the Next Milestone</span>
+        <h2>Help Us Reach<br/>200 Villages</h2>
+        <p>Every contribution goes directly to free health camps, maternal care, animal welfare, and tree plantation drives.</p>
+      </div>
+      <div class="donate-banner-btns">
+        <a href="donate.html" class="btn btn-primary btn-lg">Donate Now</a>
+        <a href="contact.html" class="btn btn-outline-w btn-lg">Volunteer With Us</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <button class="back-to-top" id="backToTop">↑</button>
-  <script src="js/main.js"></script>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><svg viewBox="0 0 36 36" fill="none" style="width:36px;height:36px"><circle cx="18" cy="18" r="17" fill="#22c55e" opacity=".12"/><path d="M20 4 A10 10 0 1 1 4 18 A7 7 0 1 0 20 4Z" fill="#22c55e"/><rect x="15.5" y="24" width="5" height="10" rx="1.5" fill="white"/><rect x="10.5" y="27.5" width="15" height="4" rx="1.5" fill="white"/></svg><div><span class="name">MOON Foundation</span><span class="tag">Making Our Own Nation Healthy</span></div></div>
+        <p>Bringing healthcare, compassion, and sustainability to every corner of India — one community at a time.</p>
+        <div class="socials"><a href="#" class="social-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#" class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></a></div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Our Impact</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html#healthcare">Rural Healthcare</a></li><li><a href="programs.html#maternal">Maternal & Child</a></li><li><a href="programs.html#animal">Animal Welfare</a></li><li><a href="programs.html#trees">Tree Plantation</a></li><li><a href="donate.html">Donate Now</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4>
+        <div class="footer-contact-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span>Civil Lines, Bareilly<br/>Uttar Pradesh 243001</span></div>
+        <div class="footer-contact-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><span>info@moonfoundation.org</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 MOON Foundation · Registered NGO · 80G Certified · Making Our Own Nation Healthy</p>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">80G Certificate</a><a href="#">Annual Report</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="btt" aria-label="Back to top"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 10l7-7 7 7M12 3v18"/></svg></button>
+<script src="js/main.js"></script>
 </body>
 </html>
