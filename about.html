@@ -3,28 +3,146 @@
 <head>
   <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>About Us – MOON Foundation</title>
+  <meta name="description" content="Learn how MOON Foundation was founded, our mission for rural healthcare, and the team driving change across India."/>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="css/style.css"/><link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
 </head>
-<body>
-<nav id="nav" class="scrolled"><div class="container"><div class="nav-inner">
-  <a href="index.html" class="nav-logo"><svg viewBox="0 0 44 44" fill="none" style="width:44px;height:44px;border-radius:10px;background:#0f172a"><path d="M22 4 A18 18 0 1 1 4 22 A13 13 0 1 0 22 4Z" fill="#16a34a"/></svg><div class="nav-logo-text"><span class="name">MOON</span><span class="tag">Foundation</span></div></a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li><li><a href="about.html" class="active">About</a></li>
-    <li class="nav-drop"><a href="programs.html">Programs</a><ul class="drop-menu"><li><a href="programs.html#healthcare">Rural Healthcare</a></li><li><a href="programs.html#maternal">Maternal & Child</a></li><li><a href="programs.html#animal">Animal Welfare</a></li><li><a href="programs.html#trees">Tree Plantation</a></li></ul></li>
-    <li><a href="impact.html">Impact</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li>
-    <li><a href="donate.html" class="btn btn-primary nav-donate">Donate Now</a></li>
-  </ul>
-  <button class="hamburger" id="hbg"><span></span><span></span><span></span></button>
-</div></div></nav>
+<body class="hero-light-nav">
 
-<section class="page-hero">
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="pl-logo">
+    <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="28" stroke="#16a34a" stroke-width="3" opacity=".3"/><path d="M32 6 A26 26 0 1 1 6 32 A20 20 0 1 0 32 6Z" fill="#16a34a"/></svg>
+    <p>MOON Foundation</p>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="nav">
   <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>About Us</div>
-    <h1>About <span class="highlight">MOON Foundation</span></h1>
-    <p>Born from compassion, built on purpose — our story of making India healthier, one community at a time.</p>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg viewBox="0 0 44 44" fill="none" style="width:44px;height:44px;border-radius:10px;background:#0f172a"><path d="M22 4 A18 18 0 1 1 4 22 A13 13 0 1 0 22 4Z" fill="#16a34a"/></svg>
+        <div class="nav-logo-text"><span class="name">MOON</span><span class="tag">Foundation</span></div>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li class="nav-drop">
+          <a href="programs.html">Programs</a>
+          <ul class="drop-menu">
+            <li><a href="programs.html#healthcare">Rural Healthcare</a></li>
+            <li><a href="programs.html#maternal">Maternal & Child</a></li>
+            <li><a href="programs.html#animal">Animal Welfare</a></li>
+            <li><a href="programs.html#trees">Tree Plantation</a></li>
+          </ul>
+        </li>
+        <li><a href="impact.html">Impact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="btn btn-primary nav-donate">Donate Now</a></li>
+      </ul>
+      <button class="hamburger" id="hbg" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ ABOUT HERO — LIGHT ══════════════════════════════════════ -->
+<section class="about-hero-light">
+  <div class="container">
+    <div class="about-hero-inner">
+
+      <!-- LEFT: Copy -->
+      <div>
+        <div class="breadcrumb breadcrumb-light">
+          <a href="index.html">Home</a><span>/</span>About Us
+        </div>
+        <div class="hero-light-badge" style="margin-bottom:18px">
+          <span class="dot"></span>
+          Our Story Since 2020
+        </div>
+        <h1 style="font-family:var(--font-serif);font-size:clamp(2.4rem,4.5vw,3.6rem);font-weight:700;color:var(--navy);line-height:1.12;margin-bottom:20px">
+          Born from<br/>
+          <em>Compassion,</em><br/>
+          Built on Purpose
+        </h1>
+        <p style="font-size:1.1rem;color:var(--mid);line-height:1.75;margin-bottom:28px">
+          MOON Foundation — <strong>Making Our Own Nation Healthy</strong> — started with a single health camp serving 87 patients in a remote village of Uttar Pradesh. Today we operate across multiple districts, running year-round healthcare, maternal care, animal welfare, and tree plantation programs.
+        </p>
+
+        <div class="about-hero-stats">
+          <div class="ahs-block">
+            <span class="ahs-num">6+</span>
+            <span class="ahs-label">Years Active</span>
+          </div>
+          <div class="ahs-divider"></div>
+          <div class="ahs-block">
+            <span class="ahs-num">84+</span>
+            <span class="ahs-label">Villages Reached</span>
+          </div>
+          <div class="ahs-divider"></div>
+          <div class="ahs-block">
+            <span class="ahs-num">240+</span>
+            <span class="ahs-label">Volunteers</span>
+          </div>
+        </div>
+
+        <div class="hero-trust-pills" style="margin-top:28px">
+          <span class="hero-trust-pill">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            Registered NGO
+          </span>
+          <span class="hero-trust-pill">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            80G Tax Benefit
+          </span>
+          <span class="hero-trust-pill">
+            <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            Audited Annually
+          </span>
+        </div>
+      </div>
+
+      <!-- RIGHT: Image with floating accent card -->
+      <div style="position:relative">
+        <div class="about-hero-img-wrap">
+          <div class="about-hero-img-accent"></div>
+          <div class="hero-img-main" style="height:560px">
+            <img
+              src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=85"
+              alt="MOON Foundation healthcare team at a camp"
+              loading="eager"
+            />
+          </div>
+
+          <!-- Floating achievement card -->
+          <div class="about-float-card about-float-1">
+            <div class="hf-icon" style="background:#dcfce7">
+              <svg fill="none" viewBox="0 0 24 24" stroke="#16a34a" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div>
+              <div class="hf-num">12,000+</div>
+              <div class="hf-label">Lives Impacted</div>
+            </div>
+          </div>
+
+          <!-- Floating year card -->
+          <div class="about-float-card about-float-2">
+            <div class="hf-icon" style="background:#fef3c7">
+              <svg fill="none" viewBox="0 0 24 24" stroke="#d97706" stroke-width="2"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+            </div>
+            <div>
+              <div class="hf-num">Est. 2020</div>
+              <div class="hf-label">Proudly Serving</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -32,13 +150,15 @@
 <section class="section">
   <div class="container">
     <div class="story-split">
-      <div class="story-img sr-l"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="MOON Foundation founders and team" loading="lazy"/></div>
+      <div class="story-img sr-l">
+        <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=800&q=80" alt="MOON Foundation founders and volunteers" loading="lazy"/>
+      </div>
       <div class="sr-r">
         <span class="eyebrow">Our Story</span>
         <h2 class="section-title">How <span class="highlight">MOON</span> Was Born</h2>
-        <p>MOON Foundation — <strong>Making Our Own Nation Healthy</strong> — was founded by a group of passionate healthcare professionals who witnessed a stark truth: families walking kilometres for basic care, mothers delivering without skilled support, stray animals suffering with no help.</p>
-        <p>We started with a single health camp in a remote village of Uttar Pradesh, serving 87 patients in one day. That experience ignited something irreversible. Today, we operate across multiple districts, running year-round healthcare, maternal care, animal welfare, and tree plantation programs.</p>
-        <p>The moon illuminates the darkest nights — that's exactly what we strive to do for the communities we serve.</p>
+        <p>We were a group of healthcare professionals who witnessed a stark truth: families walking kilometres for basic care, mothers delivering without skilled support, stray animals suffering with no help, and village after village left out of India's development story.</p>
+        <p>We started with a single health camp in a remote village of Uttar Pradesh, serving 87 patients in one day. That experience ignited something irreversible. Today, MOON Foundation operates across multiple districts with year-round programs.</p>
+        <p>The moon illuminates the darkest nights — that's exactly what we strive to do for the communities we serve, one camp, one drive, one tree at a time.</p>
         <div class="mission-tags" style="margin-top:24px">
           <span class="mission-tag">Founded 2020</span>
           <span class="mission-tag">Registered NGO</span>
@@ -127,9 +247,32 @@
   </div>
 </section>
 
-<section class="donate-banner"><div class="donate-banner-bg"></div><div class="donate-banner-overlay"></div><div class="container"><div class="donate-banner-inner"><div class="donate-banner-text"><h2>Join Our <span style="color:#4ade80">Mission</span></h2><p>Whether you give your time, skills, or resources — every contribution brings us closer to a healthier India.</p></div><div class="donate-banner-btns"><a href="donate.html" class="btn btn-primary btn-lg">Donate Now</a><a href="contact.html" class="btn btn-outline-w btn-lg">Volunteer With Us</a></div></div></div></section>
+<section class="donate-banner"><div class="donate-banner-bg"></div><div class="donate-banner-overlay"></div><div class="container"><div class="donate-banner-inner"><div class="donate-banner-text"><span class="eyebrow" style="color:#4ade80">Join the Mission</span><h2>Every Contribution<br/>Changes a Life</h2><p>Whether you give your time, skills, or resources — every contribution brings us closer to a healthier India.</p></div><div class="donate-banner-btns"><a href="donate.html" class="btn btn-primary btn-lg">Donate Now</a><a href="contact.html" class="btn btn-outline-w btn-lg">Volunteer With Us</a></div></div></div></section>
 
-<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-logo"><svg viewBox="0 0 36 36" fill="none" style="width:36px;height:36px"><circle cx="18" cy="18" r="17" fill="#16a34a" opacity=".15"/><path d="M18 3 A15 15 0 1 1 3 18 A11 11 0 1 0 18 3Z" fill="#16a34a"/></svg><div><span class="name">MOON Foundation</span><span class="tag">Making Our Own Nation Healthy</span></div></div><p>Bringing healthcare, compassion, and sustainability to every corner of India.</p><div class="socials"><a href="#" class="social-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#" class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></a></div></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html#healthcare">Rural Healthcare</a></li><li><a href="programs.html#maternal">Maternal & Child</a></li><li><a href="programs.html#animal">Animal Welfare</a></li><li><a href="programs.html#trees">Tree Plantation</a></li></ul></div><div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span>Civil Lines, Bareilly, UP 243001</span></div><div class="footer-contact-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><span>info@moonfoundation.org</span></div></div></div><div class="footer-bottom"><p>© 2026 MOON Foundation · Registered NGO · 80G Certified</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Annual Report</a></div></div></div></footer>
-<button id="btt"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 10l7-7 7 7M12 3v18"/></svg></button>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo"><svg viewBox="0 0 36 36" fill="none" style="width:36px;height:36px"><circle cx="18" cy="18" r="17" fill="#16a34a" opacity=".15"/><path d="M18 3 A15 15 0 1 1 3 18 A11 11 0 1 0 18 3Z" fill="#16a34a"/></svg><div><span class="name">MOON Foundation</span><span class="tag">Making Our Own Nation Healthy</span></div></div>
+        <p>Bringing healthcare, compassion, and sustainability to every corner of India — one community at a time.</p>
+        <div class="socials"><a href="#" class="social-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#" class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></a></div>
+      </div>
+      <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html#healthcare">Rural Healthcare</a></li><li><a href="programs.html#maternal">Maternal & Child</a></li><li><a href="programs.html#animal">Animal Welfare</a></li><li><a href="programs.html#trees">Tree Plantation</a></li></ul></div>
+      <div class="footer-col"><h4>Contact</h4>
+        <div class="footer-contact-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span>Civil Lines, Bareilly<br/>Uttar Pradesh 243001</span></div>
+        <div class="footer-contact-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><span>info@moonfoundation.org</span></div>
+        <div class="footer-contact-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><span>+91 98765 43210</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 MOON Foundation · Registered NGO · 80G Certified · Making Our Own Nation Healthy</p>
+      <div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">80G Certificate</a><a href="#">Annual Report</a></div>
+    </div>
+  </div>
+</footer>
+
+<button id="btt" aria-label="Back to top"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 10l7-7 7 7M12 3v18"/></svg></button>
 <script src="js/main.js"></script>
-</body></html>
+</body>
+</html>
