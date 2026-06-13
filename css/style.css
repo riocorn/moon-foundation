@@ -729,16 +729,16 @@ input, textarea, select { font: inherit; }
 .mvv-card h3 { font-size: 1.15rem; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
 .mvv-card p { font-size: .875rem; color: var(--mid); line-height: 1.75; }
 
-/* ── Scroll reveal ────────────────────────────────────────────── */
-.sr { opacity: 0; transform: translateY(32px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
-.sr.in { opacity: 1; transform: translateY(0); }
-.sr-l { opacity: 0; transform: translateX(-32px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
-.sr-l.in { opacity: 1; transform: translateX(0); }
-.sr-r { opacity: 0; transform: translateX(32px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
-.sr-r.in { opacity: 1; transform: translateX(0); }
-.d1 { transition-delay: .1s; } .d2 { transition-delay: .18s; } .d3 { transition-delay: .26s; } .d4 { transition-delay: .34s; }
-/* Section headings are always visible — only cards/images animate */
-.section-head { opacity: 1 !important; transform: none !important; transition: none !important; }
+/* ── Scroll reveal — progressive enhancement ──────────────────── */
+/* DEFAULT: all content always visible (no JS dependency)          */
+/* JS adds .js-ready to <html> → below-fold elements animate in   */
+.js-ready .sr  { opacity: 0; transform: translateY(28px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.js-ready .sr.in  { opacity: 1; transform: translateY(0); }
+.js-ready .sr-l { opacity: 0; transform: translateX(-28px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.js-ready .sr-l.in { opacity: 1; transform: translateX(0); }
+.js-ready .sr-r { opacity: 0; transform: translateX(28px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
+.js-ready .sr-r.in { opacity: 1; transform: translateX(0); }
+.d1 { transition-delay: .08s; } .d2 { transition-delay: .16s; } .d3 { transition-delay: .24s; } .d4 { transition-delay: .32s; }
 
 /* Image container fallback backgrounds */
 .prog-card-img { background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); }
