@@ -1,246 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Programs – MOON Foundation</title>
-  <meta name="description" content="Explore MOON Foundation's four key programs: Rural Healthcare, Maternal & Child Health, Animal Welfare, and Tree Plantation." />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/animations.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="MOON Foundation's four programs: Rural Healthcare, Maternal & Child Health, Animal Welfare, and Tree Plantation across India."/>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/><link rel="stylesheet" href="css/animations.css"/>
 </head>
 <body>
+<nav id="nav" class="scrolled"><div class="container"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><svg viewBox="0 0 44 44" fill="none" style="width:44px;height:44px;border-radius:10px;background:#0f172a"><path d="M22 4 A18 18 0 1 1 4 22 A13 13 0 1 0 22 4Z" fill="#16a34a"/></svg><div class="nav-logo-text"><span class="name">MOON</span><span class="tag">Foundation</span></div></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+    <li class="nav-drop"><a href="programs.html" class="active">Programs</a><ul class="drop-menu"><li><a href="#healthcare">Rural Healthcare</a></li><li><a href="#maternal">Maternal & Child</a></li><li><a href="#animal">Animal Welfare</a></li><li><a href="#trees">Tree Plantation</a></li></ul></li>
+    <li><a href="impact.html">Impact</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li>
+    <li><a href="donate.html" class="btn btn-primary nav-donate">Donate Now</a></li>
+  </ul>
+  <button class="hamburger" id="hbg"><span></span><span></span><span></span></button>
+</div></div></nav>
 
-  <!-- NAVBAR -->
-  <nav id="navbar" class="scrolled">
-    <div class="nav-container">
-      <a href="index.html" class="nav-brand">
-        <div class="brand-logo"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#2ecc71" stroke-width="2" opacity="0.4"/><path d="M24 4 A20 20 0 1 1 4 24 A15 15 0 1 0 24 4 Z" fill="#2ecc71"/></svg></div>
-        <div class="brand-text"><span class="brand-name">MOON</span><span class="brand-tagline">Foundation</span></div>
-      </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li class="dropdown"><a href="programs.html" class="active">Programs <span class="arrow">▾</span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#healthcare">Rural Healthcare</a></li>
-            <li><a href="#maternal">Maternal & Child</a></li>
-            <li><a href="#animal">Animal Welfare</a></li>
-            <li><a href="#trees">Tree Plantation</a></li>
-          </ul>
-        </li>
-        <li><a href="impact.html">Impact</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html" class="btn-donate">Donate Now</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-    </div>
-  </nav>
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Programs</div>
+    <h1>Our <span class="highlight">Programs</span></h1>
+    <p>Four pillars of action — healthcare, maternal care, animal welfare, and green earth — working together for a healthier, kinder India.</p>
+  </div>
+</section>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Programs</div>
-      <h1>Our <span class="gradient-text">Programs</span></h1>
-      <p>Four pillars of action — healthcare, maternal care, animal welfare, and green earth — working together for a healthier, kinder India.</p>
-    </div>
-  </section>
+<!-- Sticky program nav -->
+<div style="background:#fff;border-bottom:1px solid var(--border);position:sticky;top:68px;z-index:800">
+  <div class="container" style="display:flex;overflow-x:auto;gap:0">
+    <a href="#healthcare" style="padding:16px 24px;font-size:.875rem;font-weight:600;color:var(--mid);border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s;display:block" onmouseover="this.style.color='var(--green)';this.style.borderColor='var(--green)'" onmouseout="this.style.color='var(--mid)';this.style.borderColor='transparent'">Rural Healthcare</a>
+    <a href="#maternal" style="padding:16px 24px;font-size:.875rem;font-weight:600;color:var(--mid);border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s;display:block" onmouseover="this.style.color='#db2777';this.style.borderColor='#db2777'" onmouseout="this.style.color='var(--mid)';this.style.borderColor='transparent'">Maternal & Child</a>
+    <a href="#animal" style="padding:16px 24px;font-size:.875rem;font-weight:600;color:var(--mid);border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s;display:block" onmouseover="this.style.color='#d97706';this.style.borderColor='#d97706'" onmouseout="this.style.color='var(--mid)';this.style.borderColor='transparent'">Animal Welfare</a>
+    <a href="#trees" style="padding:16px 24px;font-size:.875rem;font-weight:600;color:var(--mid);border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s;display:block" onmouseover="this.style.color='var(--green)';this.style.borderColor='var(--green)'" onmouseout="this.style.color='var(--mid)';this.style.borderColor='transparent'">Tree Plantation</a>
+  </div>
+</div>
 
-  <!-- PROGRAMS NAV -->
-  <div style="background:#fff;border-bottom:1px solid var(--border);position:sticky;top:72px;z-index:900">
-    <div class="container">
-      <div style="display:flex;gap:0;overflow-x:auto">
-        <a href="#healthcare" style="padding:18px 28px;font-weight:600;font-size:0.9rem;color:var(--navy);border-bottom:3px solid transparent;white-space:nowrap;transition:all 0.2s" onmouseover="this.style.borderColor='#2ecc71';this.style.color='#2ecc71'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--navy)'">🏥 Rural Healthcare</a>
-        <a href="#maternal" style="padding:18px 28px;font-weight:600;font-size:0.9rem;color:var(--navy);border-bottom:3px solid transparent;white-space:nowrap;transition:all 0.2s" onmouseover="this.style.borderColor='#e74c8b';this.style.color='#e74c8b'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--navy)'">👶 Maternal & Child</a>
-        <a href="#animal" style="padding:18px 28px;font-weight:600;font-size:0.9rem;color:var(--navy);border-bottom:3px solid transparent;white-space:nowrap;transition:all 0.2s" onmouseover="this.style.borderColor='#f39c12';this.style.color='#f39c12'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--navy)'">🐾 Animal Welfare</a>
-        <a href="#trees" style="padding:18px 28px;font-weight:600;font-size:0.9rem;color:var(--navy);border-bottom:3px solid transparent;white-space:nowrap;transition:all 0.2s" onmouseover="this.style.borderColor='#27ae60';this.style.color='#27ae60'" onmouseout="this.style.borderColor='transparent';this.style.color='var(--navy)'">🌳 Tree Plantation</a>
+<section class="prog-section" id="healthcare">
+  <div class="container">
+    <div class="prog-block">
+      <div class="prog-photo sr-l"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80" alt="Rural Healthcare Camp" loading="lazy"/></div>
+      <div class="prog-text sr-r">
+        <span class="eyebrow">Program 1</span>
+        <h2 class="section-title">Free Healthcare for <span class="highlight">Remote Villages</span></h2>
+        <p>In rural India, millions lack access to even basic medical consultation. The nearest hospital can be hours away. MOON Foundation bridges this critical gap by bringing qualified doctors, diagnostics, and medicines directly to villages.</p>
+        <div class="prog-features">
+          <div class="prog-feat"><div class="prog-feat-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Free general physician consultations and specialist camps (eye, dental, gynaecology)</p></div>
+          <div class="prog-feat"><div class="prog-feat-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Blood tests, BP, blood sugar, and cancer screening drives</p></div>
+          <div class="prog-feat"><div class="prog-feat-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Free medicine distribution — antibiotics, vitamins, chronic disease management</p></div>
+          <div class="prog-feat"><div class="prog-feat-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Ambulance support and referral linkages to district hospitals</p></div>
+          <div class="prog-feat"><div class="prog-feat-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Health awareness on hygiene, nutrition, and preventable diseases</p></div>
+        </div>
+        <div class="prog-stats">
+          <div class="prog-stat"><span class="n">84+</span><span class="l">Villages</span></div>
+          <div class="prog-stat"><span class="n">12,000+</span><span class="l">Patients</span></div>
+          <div class="prog-stat"><span class="n">48</span><span class="l">Camps Held</span></div>
+        </div>
+        <a href="donate.html" class="btn btn-primary">Support Healthcare →</a>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- HEALTHCARE -->
-  <section class="program-section" id="healthcare">
-    <div class="container">
-      <div class="program-block">
-        <div class="program-visual prog-bg-1 reveal-left">🏥</div>
-        <div class="program-text reveal-right">
-          <span class="section-label" style="background:#d5f5e3;color:#1aab5c">Rural Healthcare</span>
-          <h2>Free Healthcare for <span class="gradient-text">Remote Villages</span></h2>
-          <p>In rural India, millions lack access to even basic medical consultation. The nearest hospital can be hours away. MOON Foundation bridges this critical gap by bringing qualified doctors, diagnostics, and medicines directly to villages.</p>
-          <div class="program-features">
-            <div class="prog-feature"><div class="prog-check">✓</div><p>Free general physician consultations and specialist camps (eye, dental, gynaecology)</p></div>
-            <div class="prog-feature"><div class="prog-check">✓</div><p>Blood tests, blood pressure, blood sugar, and cancer screening drives</p></div>
-            <div class="prog-feature"><div class="prog-check">✓</div><p>Free medicine distribution — antibiotics, vitamins, chronic disease management</p></div>
-            <div class="prog-feature"><div class="prog-check">✓</div><p>Ambulance support and referral linkages to district hospitals</p></div>
-            <div class="prog-feature"><div class="prog-check">✓</div><p>Health awareness sessions on hygiene, nutrition, and preventable diseases</p></div>
-          </div>
-          <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px">
-            <div style="text-align:center;background:var(--green-light);border-radius:var(--radius-sm);padding:16px 24px">
-              <div style="font-size:1.8rem;font-weight:800;color:var(--green-dark)">84+</div>
-              <div style="font-size:0.8rem;color:var(--text-light)">Villages</div>
-            </div>
-            <div style="text-align:center;background:var(--green-light);border-radius:var(--radius-sm);padding:16px 24px">
-              <div style="font-size:1.8rem;font-weight:800;color:var(--green-dark)">12,000+</div>
-              <div style="font-size:0.8rem;color:var(--text-light)">Patients Treated</div>
-            </div>
-            <div style="text-align:center;background:var(--green-light);border-radius:var(--radius-sm);padding:16px 24px">
-              <div style="font-size:1.8rem;font-weight:800;color:var(--green-dark)">48</div>
-              <div style="font-size:0.8rem;color:var(--text-light)">Camps Held</div>
-            </div>
-          </div>
-          <div style="margin-top:28px"><a href="donate.html" class="btn-primary">Support Healthcare →</a></div>
+<section class="prog-section bg-pale" id="maternal">
+  <div class="container">
+    <div class="prog-block flip">
+      <div class="prog-photo sr-r"><img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=800&q=80" alt="Maternal and Child Health" loading="lazy"/></div>
+      <div class="prog-text sr-l">
+        <span class="eyebrow" style="color:#db2777">Program 2</span>
+        <h2 class="section-title">Safe Births, <span style="color:#db2777">Healthy Futures</span></h2>
+        <p>India's maternal mortality rate in rural areas remains alarmingly high. Many deliveries happen without skilled assistance. MOON Foundation's maternal health program ensures no mother faces her most critical moment alone.</p>
+        <div class="prog-features">
+          <div class="prog-feat"><div class="prog-feat-check" style="background:#fce7f3"><svg fill="none" viewBox="0 0 24 24" stroke="#db2777" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Antenatal care camps — monitoring, iron supplements, vaccinations</p></div>
+          <div class="prog-feat"><div class="prog-feat-check" style="background:#fce7f3"><svg fill="none" viewBox="0 0 24 24" stroke="#db2777" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Safe delivery support with trained midwives and emergency referrals</p></div>
+          <div class="prog-feat"><div class="prog-feat-check" style="background:#fce7f3"><svg fill="none" viewBox="0 0 24 24" stroke="#db2777" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Postnatal care — mother recovery, newborn health monitoring</p></div>
+          <div class="prog-feat"><div class="prog-feat-check" style="background:#fce7f3"><svg fill="none" viewBox="0 0 24 24" stroke="#db2777" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Child immunisation — polio, DPT, hepatitis, BCG campaigns</p></div>
+          <div class="prog-feat"><div class="prog-feat-check" style="background:#fce7f3"><svg fill="none" viewBox="0 0 24 24" stroke="#db2777" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Nutrition support — therapeutic food for malnourished children</p></div>
         </div>
+        <div class="prog-stats">
+          <div class="prog-stat"><span class="n">1,800+</span><span class="l">Mothers</span></div>
+          <div class="prog-stat"><span class="n">600+</span><span class="l">Safe Deliveries</span></div>
+          <div class="prog-stat"><span class="n">2,400+</span><span class="l">Children Vaccinated</span></div>
+        </div>
+        <a href="donate.html" class="btn btn-primary" style="background:#db2777;box-shadow:0 4px 16px rgba(219,39,119,.3)">Support Maternal Care →</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- MATERNAL -->
-  <section class="program-section bg-light" id="maternal">
-    <div class="container">
-      <div class="program-block reverse">
-        <div class="program-visual prog-bg-2 reveal-right">👶</div>
-        <div class="program-text reveal-left">
-          <span class="section-label" style="background:#fce4f3;color:#c0185e">Maternal & Child Health</span>
-          <h2>Safe Births, <span class="gradient-text">Healthy Futures</span></h2>
-          <p>India's maternal mortality rate in rural areas remains alarmingly high. Many deliveries happen without skilled assistance. MOON Foundation's maternal health program ensures that no mother faces her most critical moment alone.</p>
-          <div class="program-features">
-            <div class="prog-feature"><div class="prog-check" style="background:#fce4f3;color:#e74c8b">✓</div><p>Antenatal care camps — monitoring, iron supplements, vaccinations</p></div>
-            <div class="prog-feature"><div class="prog-check" style="background:#fce4f3;color:#e74c8b">✓</div><p>Safe delivery support with trained midwives and emergency referrals</p></div>
-            <div class="prog-feature"><div class="prog-check" style="background:#fce4f3;color:#e74c8b">✓</div><p>Postnatal care — mother recovery, newborn health monitoring</p></div>
-            <div class="prog-feature"><div class="prog-check" style="background:#fce4f3;color:#e74c8b">✓</div><p>Child immunisation drives — polio, DPT, hepatitis, BCG</p></div>
-            <div class="prog-feature"><div class="prog-check" style="background:#fce4f3;color:#e74c8b">✓</div><p>Nutrition support — ready-to-eat therapeutic food for malnourished children</p></div>
-            <div class="prog-feature"><div class="prog-check" style="background:#fce4f3;color:#e74c8b">✓</div><p>Awareness on breastfeeding, family planning, and menstrual hygiene</p></div>
-          </div>
-          <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px">
-            <div style="text-align:center;background:#fce4f3;border-radius:var(--radius-sm);padding:16px 24px">
-              <div style="font-size:1.8rem;font-weight:800;color:#c0185e">1,800+</div>
-              <div style="font-size:0.8rem;color:var(--text-light)">Mothers Supported</div>
-            </div>
-            <div style="text-align:center;background:#fce4f3;border-radius:var(--radius-sm);padding:16px 24px">
-              <div style="font-size:1.8rem;font-weight:800;color:#c0185e">600+</div>
-              <div style="font-size:0.8rem;color:var(--text-light)">Safe Deliveries</div>
-            </div>
-            <div style="text-align:center;background:#fce4f3;border-radius:var(--radius-sm);padding:16px 24px">
-              <div style="font-size:1.8rem;font-weight:800;color:#c0185e">2,400+</div>
-              <div style="font-size:0.8rem;color:var(--text-light)">Children Vaccinated</div>
-            </div>
-          </div>
-          <div style="margin-top:28px"><a href="donate.html" class="btn-primary" style="background:linear-gradient(135deg,#e74c8b,#c0185e)">Support Maternal Care →</a></div>
+<section class="prog-section" id="animal">
+  <div class="container">
+    <div class="prog-block">
+      <div class="prog-photo sr-l"><img src="https://images.unsplash.com/photo-1601758003122-53c40e686a19?auto=format&fit=crop&w=800&q=80" alt="Animal Welfare" loading="lazy"/></div>
+      <div class="prog-text sr-r">
+        <span class="eyebrow" style="color:#d97706">Program 3</span>
+        <h2 class="section-title">Compassion for <span style="color:#d97706">Every Living Being</span></h2>
+        <p>Millions of stray, injured, and abandoned animals in India live without care. MOON Foundation believes a truly healthy nation treats all living beings with kindness — including our voiceless companions.</p>
+        <div class="prog-features">
+          <div class="prog-feat"><div class="prog-feat-check" style="background:#fef3c7"><svg fill="none" viewBox="0 0 24 24" stroke="#d97706" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>24/7 animal rescue helpline and rapid response team</p></div>
+          <div class="prog-feat"><div class="prog-feat-check" style="background:#fef3c7"><svg fill="none" viewBox="0 0 24 24" stroke="#d97706" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Free veterinary treatment — wounds, infections, fractures, surgeries</p></div>
+          <div class="prog-feat"><div class="prog-feat-check" style="background:#fef3c7"><svg fill="none" viewBox="0 0 24 24" stroke="#d97706" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Mass vaccination drives — anti-rabies, parvovirus, distemper</p></div>
+          <div class="prog-feat"><div class="prog-feat-check" style="background:#fef3c7"><svg fill="none" viewBox="0 0 24 24" stroke="#d97706" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Sterilisation (ABC – Animal Birth Control) for humane population management</p></div>
+          <div class="prog-feat"><div class="prog-feat-check" style="background:#fef3c7"><svg fill="none" viewBox="0 0 24 24" stroke="#d97706" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Shelter, feeding, and adoption programs for rescued animals</p></div>
         </div>
+        <div class="prog-stats">
+          <div class="prog-stat"><span class="n">320+</span><span class="l">Rescued</span></div>
+          <div class="prog-stat"><span class="n">850+</span><span class="l">Vaccinated</span></div>
+          <div class="prog-stat"><span class="n">120+</span><span class="l">Adopted</span></div>
+        </div>
+        <a href="donate.html" class="btn btn-primary" style="background:#d97706;box-shadow:0 4px 16px rgba(217,119,6,.3)">Support Animal Welfare →</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- ANIMAL WELFARE -->
-  <section class="program-section" id="animal">
-    <div class="container">
-      <div class="program-block">
-        <div class="program-visual prog-bg-3 reveal-left">🐾</div>
-        <div class="program-text reveal-right">
-          <span class="section-label" style="background:#fef9e7;color:#b7770d">Animal Welfare</span>
-          <h2>Compassion for <span class="gradient-text">Every Living Being</span></h2>
-          <p>Millions of stray, injured, and abandoned animals in India live without care or protection. MOON Foundation believes a truly healthy nation is one that treats all its living beings with kindness — including our voiceless companions.</p>
-          <div class="program-features">
-            <div class="prog-feature"><div class="prog-check" style="background:#fef9e7;color:#f39c12">✓</div><p>24/7 animal rescue helpline and rapid response team</p></div>
-            <div class="prog-feature"><div class="prog-check" style="background:#fef9e7;color:#f39c12">✓</div><p>Free veterinary treatment — wounds, infections, fractures, surgeries</p></div>
-            <div class="prog-feature"><div class="prog-check" style="background:#fef9e7;color:#f39c12">✓</div><p>Mass vaccination drives — anti-rabies, parvovirus, distemper</p></div>
-            <div class="prog-feature"><div class="prog-check" style="background:#fef9e7;color:#f39c12">✓</div><p>Sterilisation (ABC – Animal Birth Control) to manage stray population humanely</p></div>
-            <div class="prog-feature"><div class="prog-check" style="background:#fef9e7;color:#f39c12">✓</div><p>Shelter, feeding, and adoption programs for rescued animals</p></div>
-            <div class="prog-feature"><div class="prog-check" style="background:#fef9e7;color:#f39c12">✓</div><p>Community education on animal rights and co-existence</p></div>
-          </div>
-          <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px">
-            <div style="text-align:center;background:#fef9e7;border-radius:var(--radius-sm);padding:16px 24px">
-              <div style="font-size:1.8rem;font-weight:800;color:#b7770d">320+</div>
-              <div style="font-size:0.8rem;color:var(--text-light)">Animals Rescued</div>
-            </div>
-            <div style="text-align:center;background:#fef9e7;border-radius:var(--radius-sm);padding:16px 24px">
-              <div style="font-size:1.8rem;font-weight:800;color:#b7770d">850+</div>
-              <div style="font-size:0.8rem;color:var(--text-light)">Vaccinated</div>
-            </div>
-            <div style="text-align:center;background:#fef9e7;border-radius:var(--radius-sm);padding:16px 24px">
-              <div style="font-size:1.8rem;font-weight:800;color:#b7770d">120+</div>
-              <div style="font-size:0.8rem;color:var(--text-light)">Adopted</div>
-            </div>
-          </div>
-          <div style="margin-top:28px"><a href="donate.html" class="btn-primary" style="background:linear-gradient(135deg,#f39c12,#e67e22)">Support Animal Welfare →</a></div>
+<section class="prog-section bg-pale" id="trees">
+  <div class="container">
+    <div class="prog-block flip">
+      <div class="prog-photo sr-r"><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80" alt="Tree Plantation Drive" loading="lazy"/></div>
+      <div class="prog-text sr-l">
+        <span class="eyebrow">Program 4</span>
+        <h2 class="section-title">Growing a <span class="highlight">Greener India</span></h2>
+        <p>Deforestation, climate change, and air pollution affect the poorest communities most. MOON Foundation's plantation drives don't just plant trees — they build community ownership and long-term ecological resilience.</p>
+        <div class="prog-features">
+          <div class="prog-feat"><div class="prog-feat-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Mass drives on Independence Day, Earth Day, World Environment Day</p></div>
+          <div class="prog-feat"><div class="prog-feat-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>School Green Programs — students plant, name, and care for their trees</p></div>
+          <div class="prog-feat"><div class="prog-feat-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Native species priority — Neem, Peepal, Mango, Jamun, Mahua for biodiversity</p></div>
+          <div class="prog-feat"><div class="prog-feat-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Village community forests — degraded land restored</p></div>
+          <div class="prog-feat"><div class="prog-feat-check"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg></div><p>Tree adoption — donors adopt and track the growth of their sponsored trees</p></div>
         </div>
+        <div class="prog-stats">
+          <div class="prog-stat"><span class="n">5,000+</span><span class="l">Trees Planted</span></div>
+          <div class="prog-stat"><span class="n">24</span><span class="l">School Drives</span></div>
+          <div class="prog-stat"><span class="n">85%</span><span class="l">Survival Rate</span></div>
+        </div>
+        <a href="donate.html" class="btn btn-primary">Plant a Tree →</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TREE PLANTATION -->
-  <section class="program-section bg-light" id="trees">
-    <div class="container">
-      <div class="program-block reverse">
-        <div class="program-visual prog-bg-4 reveal-right">🌳</div>
-        <div class="program-text reveal-left">
-          <span class="section-label" style="background:#eafaf1;color:#1e8449">Tree Plantation</span>
-          <h2>Growing a <span class="gradient-text">Greener India</span></h2>
-          <p>Deforestation, climate change, and air pollution affect the poorest communities most. MOON Foundation's plantation drives don't just plant trees — they build community ownership, environmental awareness, and long-term ecological resilience.</p>
-          <div class="program-features">
-            <div class="prog-feature"><div class="prog-check" style="background:#eafaf1;color:#27ae60">✓</div><p>Mass plantation drives on Independence Day, Earth Day, and World Environment Day</p></div>
-            <div class="prog-feature"><div class="prog-check" style="background:#eafaf1;color:#27ae60">✓</div><p>School Green Programs — students plant, name, and care for their own trees</p></div>
-            <div class="prog-feature"><div class="prog-check" style="background:#eafaf1;color:#27ae60">✓</div><p>Native species priority — Neem, Peepal, Mango, Jamun, Mahua for biodiversity</p></div>
-            <div class="prog-feature"><div class="prog-check" style="background:#eafaf1;color:#27ae60">✓</div><p>Village community forests — 5+ acres of degraded land restored</p></div>
-            <div class="prog-feature"><div class="prog-check" style="background:#eafaf1;color:#27ae60">✓</div><p>Tree adoption — donors adopt and track growth of their sponsored trees</p></div>
-            <div class="prog-feature"><div class="prog-check" style="background:#eafaf1;color:#27ae60">✓</div><p>Partnership with government forest departments for large-scale restoration</p></div>
-          </div>
-          <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px">
-            <div style="text-align:center;background:#eafaf1;border-radius:var(--radius-sm);padding:16px 24px">
-              <div style="font-size:1.8rem;font-weight:800;color:#1e8449">5,000+</div>
-              <div style="font-size:0.8rem;color:var(--text-light)">Trees Planted</div>
-            </div>
-            <div style="text-align:center;background:#eafaf1;border-radius:var(--radius-sm);padding:16px 24px">
-              <div style="font-size:1.8rem;font-weight:800;color:#1e8449">24</div>
-              <div style="font-size:0.8rem;color:var(--text-light)">School Drives</div>
-            </div>
-            <div style="text-align:center;background:#eafaf1;border-radius:var(--radius-sm);padding:16px 24px">
-              <div style="font-size:1.8rem;font-weight:800;color:#1e8449">85%</div>
-              <div style="font-size:0.8rem;color:var(--text-light)">Survival Rate</div>
-            </div>
-          </div>
-          <div style="margin-top:28px"><a href="donate.html" class="btn-primary" style="background:linear-gradient(135deg,#27ae60,#1e8449)">Plant a Tree →</a></div>
-        </div>
-      </div>
-    </div>
-  </section>
+<section class="donate-banner">
+  <div class="donate-banner-bg"></div><div class="donate-banner-overlay"></div>
+  <div class="container"><div class="donate-banner-inner">
+    <div class="donate-banner-text"><span class="eyebrow" style="color:#4ade80">Fund a Program</span><h2>Choose a Cause.<br/>Change a Life.</h2><p>Every contribution goes directly to the field — no middlemen, no overhead bloat.</p></div>
+    <div class="donate-banner-btns"><a href="donate.html" class="btn btn-primary btn-lg">Donate Now</a><a href="contact.html" class="btn btn-outline-w btn-lg">Volunteer</a></div>
+  </div></div>
+</section>
 
-  <!-- DONATE CTA -->
-  <section class="donate-cta">
-    <div class="container">
-      <div class="donate-cta-inner">
-        <div class="donate-cta-text">
-          <h2>Fund a Program. <span class="gradient-text">Change a Life.</span></h2>
-          <p>Choose the cause closest to your heart and make a direct, measurable difference today.</p>
-        </div>
-        <div class="donate-cta-action">
-          <a href="donate.html" class="btn-primary btn-large">Donate Now</a>
-          <a href="contact.html" class="btn-outline-white">Become a Volunteer</a>
-        </div>
-      </div>
-    </div>
-  </section>
+<footer class="footer"><div class="container">
+  <div class="footer-grid">
+    <div><div class="footer-logo"><svg viewBox="0 0 36 36" fill="none" style="width:36px;height:36px"><circle cx="18" cy="18" r="17" fill="#16a34a" opacity=".15"/><path d="M18 3 A15 15 0 1 1 3 18 A11 11 0 1 0 18 3Z" fill="#16a34a"/></svg><div><span class="name">MOON Foundation</span><span class="tag">Making Our Own Nation Healthy</span></div></div><p>Bringing healthcare, compassion, and sustainability to every corner of India.</p><div class="socials"><a href="#" class="social-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#" class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></a></div></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Programs</h4><ul><li><a href="#healthcare">Rural Healthcare</a></li><li><a href="#maternal">Maternal & Child</a></li><li><a href="#animal">Animal Welfare</a></li><li><a href="#trees">Tree Plantation</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span>Bareilly, UP 243001</span></div><div class="footer-contact-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><span>info@moonfoundation.org</span></div></div>
+  </div>
+  <div class="footer-bottom"><p>© 2026 MOON Foundation · Registered NGO · 80G Certified</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Annual Report</a></div></div>
+</div></footer>
 
-  <!-- FOOTER (same as index) -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="nav-brand" style="margin-bottom:1rem"><div class="brand-logo"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#2ecc71" stroke-width="2" opacity="0.4"/><path d="M24 4 A20 20 0 1 1 4 24 A15 15 0 1 0 24 4 Z" fill="#2ecc71"/></svg></div><div class="brand-text"><span class="brand-name">MOON</span><span class="brand-tagline">Foundation</span></div></div>
-          <p>Making Our Own Nation Healthy — bringing healthcare, compassion, and sustainability to every corner of India.</p>
-          <div class="social-links"><a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a><a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a></div>
-        </div>
-        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-        <div class="footer-col"><h4>Programs</h4><ul><li><a href="#healthcare">Rural Healthcare</a></li><li><a href="#maternal">Maternal & Child</a></li><li><a href="#animal">Animal Welfare</a></li><li><a href="#trees">Tree Plantation</a></li></ul></div>
-        <div class="footer-col"><h4>Contact</h4><ul class="contact-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bareilly, Uttar Pradesh, India</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@moonfoundation.org</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+91 98765 43210</li></ul></div>
-      </div>
-      <div class="footer-bottom"><p>© 2026 MOON Foundation. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">80G Certificate</a></div></div>
-    </div>
-  </footer>
-
-  <button class="back-to-top" id="backToTop">↑</button>
-  <script src="js/main.js"></script>
-</body>
-</html>
+<button id="btt"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 10l7-7 7 7M12 3v18"/></svg></button>
+<script src="js/main.js"></script>
+</body></html>

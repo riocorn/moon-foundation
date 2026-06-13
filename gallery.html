@@ -1,217 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Gallery – MOON Foundation</title>
-  <meta name="description" content="Photo gallery from MOON Foundation's health camps, maternal drives, animal rescue operations, and tree plantation events." />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/animations.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <style>
-    .gallery-filter { display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-bottom:40px; }
-    .filter-btn { padding:10px 24px;border:2px solid var(--border);border-radius:100px;font-weight:600;font-size:0.88rem;color:var(--text-light);transition:var(--transition);background:#fff; }
-    .filter-btn:hover,.filter-btn.active { border-color:var(--green);background:var(--green-light);color:var(--green-dark); }
-    .gallery-grid-full { display:grid;grid-template-columns:repeat(3,1fr);gap:20px; }
-    .gallery-item { border-radius:var(--radius);overflow:hidden;aspect-ratio:1;display:flex;align-items:center;justify-content:center;font-size:5rem;position:relative;cursor:pointer;transition:var(--transition); }
-    .gallery-item:hover { transform:scale(1.03);box-shadow:0 16px 48px rgba(0,0,0,0.15); }
-    .gallery-label { position:absolute;bottom:0;left:0;right:0;padding:16px;background:linear-gradient(to top,rgba(0,0,0,0.7),transparent);color:#fff;font-size:0.85rem;font-weight:600;opacity:0;transition:var(--transition); }
-    .gallery-item:hover .gallery-label { opacity:1; }
-    /* Lightbox */
-    #lightbox { position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.92);display:none;align-items:center;justify-content:center; }
-    #lightbox.open { display:flex; }
-    .lightbox-inner { position:relative;max-width:90vw;max-height:90vh;display:flex;flex-direction:column;align-items:center;gap:16px; }
-    .lightbox-img { font-size:12rem;line-height:1;background:rgba(255,255,255,0.05);border-radius:var(--radius);padding:40px;min-width:300px;text-align:center; }
-    .lightbox-caption { color:#fff;font-size:1rem;font-weight:500; }
-    .lightbox-close { position:absolute;top:-48px;right:0;color:#fff;font-size:1.8rem;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.1);border-radius:50%;transition:var(--transition); }
-    .lightbox-close:hover { background:var(--green); }
-    .lightbox-nav { position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:2rem;cursor:pointer;width:52px;height:52px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,0.1);border-radius:50%;transition:var(--transition); }
-    .lightbox-nav:hover { background:var(--green); }
-    .lightbox-prev { left:-72px; }
-    .lightbox-next { right:-72px; }
-    @media(max-width:768px){.gallery-grid-full{grid-template-columns:1fr 1fr}.lightbox-prev{left:-52px}.lightbox-next{right:-52px}}
-    @media(max-width:480px){.gallery-grid-full{grid-template-columns:1fr}}
-  </style>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/><link rel="stylesheet" href="css/animations.css"/>
 </head>
 <body>
+<nav id="nav" class="scrolled"><div class="container"><div class="nav-inner">
+  <a href="index.html" class="nav-logo"><svg viewBox="0 0 44 44" fill="none" style="width:44px;height:44px;border-radius:10px;background:#0f172a"><path d="M22 4 A18 18 0 1 1 4 22 A13 13 0 1 0 22 4Z" fill="#16a34a"/></svg><div class="nav-logo-text"><span class="name">MOON</span><span class="tag">Foundation</span></div></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+    <li class="nav-drop"><a href="programs.html">Programs</a><ul class="drop-menu"><li><a href="programs.html#healthcare">Rural Healthcare</a></li><li><a href="programs.html#maternal">Maternal & Child</a></li><li><a href="programs.html#animal">Animal Welfare</a></li><li><a href="programs.html#trees">Tree Plantation</a></li></ul></li>
+    <li><a href="impact.html">Impact</a></li><li><a href="gallery.html" class="active">Gallery</a></li><li><a href="contact.html">Contact</a></li>
+    <li><a href="donate.html" class="btn btn-primary nav-donate">Donate Now</a></li>
+  </ul>
+  <button class="hamburger" id="hbg"><span></span><span></span><span></span></button>
+</div></div></nav>
 
-  <!-- NAVBAR -->
-  <nav id="navbar" class="scrolled">
-    <div class="nav-container">
-      <a href="index.html" class="nav-brand"><div class="brand-logo"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#2ecc71" stroke-width="2" opacity="0.4"/><path d="M24 4 A20 20 0 1 1 4 24 A15 15 0 1 0 24 4 Z" fill="#2ecc71"/></svg></div><div class="brand-text"><span class="brand-name">MOON</span><span class="brand-tagline">Foundation</span></div></a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
-        <li class="dropdown"><a href="programs.html">Programs <span class="arrow">▾</span></a><ul class="dropdown-menu"><li><a href="programs.html#healthcare">Rural Healthcare</a></li><li><a href="programs.html#maternal">Maternal & Child</a></li><li><a href="programs.html#animal">Animal Welfare</a></li><li><a href="programs.html#trees">Tree Plantation</a></li></ul></li>
-        <li><a href="impact.html">Impact</a></li><li><a href="gallery.html" class="active">Gallery</a></li><li><a href="contact.html">Contact</a></li>
-        <li><a href="donate.html" class="btn-donate">Donate Now</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Gallery</div>
+    <h1>Our <span class="highlight">Gallery</span></h1>
+    <p>Real moments from health camps, maternal drives, animal rescues, and plantation events across India.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="gallery-filters">
+      <button class="gf-btn on" data-filter="all">All</button>
+      <button class="gf-btn" data-filter="healthcare">Healthcare</button>
+      <button class="gf-btn" data-filter="maternal">Maternal</button>
+      <button class="gf-btn" data-filter="animal">Animal Welfare</button>
+      <button class="gf-btn" data-filter="trees">Tree Plantation</button>
+      <button class="gf-btn" data-filter="volunteers">Volunteers</button>
     </div>
-  </nav>
 
-  <!-- PAGE HERO -->
-  <section class="page-hero">
-    <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Gallery</div>
-      <h1>Our <span class="gradient-text">Gallery</span></h1>
-      <p>Moments captured from our camps, drives, rescues, and plantation events — stories told in pictures.</p>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section class="section-pad">
-    <div class="container">
-      <div class="gallery-filter">
-        <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="healthcare">Healthcare</button>
-        <button class="filter-btn" data-filter="maternal">Maternal</button>
-        <button class="filter-btn" data-filter="animal">Animal Welfare</button>
-        <button class="filter-btn" data-filter="trees">Tree Plantation</button>
-        <button class="filter-btn" data-filter="volunteers">Volunteers</button>
-      </div>
-
-      <div class="gallery-grid-full" id="galleryGrid">
-        <div class="gallery-item gal-1 reveal" data-cat="healthcare" data-caption="Health Camp — Rampur Village, 2025" data-emoji="🏥">
-          🏥<div class="gallery-label">Health Camp — Rampur Village</div>
-        </div>
-        <div class="gallery-item gal-2 reveal delay-1" data-cat="maternal" data-caption="Maternity Drive — Shahjahanpur, 2025" data-emoji="👶">
-          👶<div class="gallery-label">Maternity Drive — Shahjahanpur</div>
-        </div>
-        <div class="gallery-item gal-3 reveal delay-2" data-cat="animal" data-caption="Dog Rescue — Bareilly City" data-emoji="🐕">
-          🐕<div class="gallery-label">Dog Rescue — Bareilly City</div>
-        </div>
-        <div class="gallery-item gal-4 reveal delay-1" data-cat="trees" data-caption="Independence Day Plantation Drive" data-emoji="🌳">
-          🌳<div class="gallery-label">Independence Day Plantation</div>
-        </div>
-        <div class="gallery-item gal-5 reveal delay-2" data-cat="healthcare" data-caption="Eye Screening Camp — Pilibhit" data-emoji="👁️">
-          👁️<div class="gallery-label">Eye Screening — Pilibhit</div>
-        </div>
-        <div class="gallery-item gal-6 reveal delay-3" data-cat="volunteers" data-caption="Volunteer Training Day 2025" data-emoji="🤝">
-          🤝<div class="gallery-label">Volunteer Training Day</div>
-        </div>
-        <div class="gallery-item gal-7 reveal" data-cat="maternal" data-caption="Prenatal Check Camp — Budaun" data-emoji="🤰">
-          🤰<div class="gallery-label">Prenatal Check Camp — Budaun</div>
-        </div>
-        <div class="gallery-item gal-8 reveal delay-1" data-cat="healthcare" data-caption="Dental Camp — Lakhimpur" data-emoji="🦷">
-          🦷<div class="gallery-label">Dental Camp — Lakhimpur</div>
-        </div>
-        <div class="gallery-item gal-9 reveal delay-2" data-cat="animal" data-caption="Vaccination Drive — Stray Animals" data-emoji="💉">
-          💉<div class="gallery-label">Mass Vaccination Drive</div>
-        </div>
-        <div class="gallery-item" style="background:linear-gradient(135deg,#f0f9ff,#b0e0e6)" data-cat="trees" data-caption="School Green Program — 24 Schools" data-emoji="🏫">
-          🏫<div class="gallery-label">School Green Program</div>
-        </div>
-        <div class="gallery-item" style="background:linear-gradient(135deg,#fff0f5,#ffb6c1)" data-cat="volunteers" data-caption="Volunteers at Annual Meet 2025" data-emoji="🎗️">
-          🎗️<div class="gallery-label">Annual Volunteer Meet 2025</div>
-        </div>
-        <div class="gallery-item" style="background:linear-gradient(135deg,#f5fff0,#90ee90)" data-cat="healthcare" data-caption="Blood Donation Camp — Moradabad" data-emoji="🩸">
-          🩸<div class="gallery-label">Blood Donation Camp</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VIDEO SECTION -->
-  <section class="section-pad bg-light">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-label">Our Story in Video</span>
-        <h2>Watch Us <span class="gradient-text">In Action</span></h2>
-      </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
-        <div class="reveal delay-1" style="background:linear-gradient(135deg,#0d1b2a,#1a2f20);border-radius:var(--radius);aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;cursor:pointer;transition:var(--transition)" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform=''">
-          <div style="width:64px;height:64px;background:rgba(46,204,113,0.2);border:2px solid var(--green);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green);font-size:1.6rem">▶</div>
-          <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;font-weight:600">Health Camp Highlights 2025</p>
-        </div>
-        <div class="reveal delay-2" style="background:linear-gradient(135deg,#1a0d1a,#2f1a2f);border-radius:var(--radius);aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;cursor:pointer;transition:var(--transition)" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform=''">
-          <div style="width:64px;height:64px;background:rgba(231,76,139,0.2);border:2px solid #e74c8b;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#e74c8b;font-size:1.6rem">▶</div>
-          <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;font-weight:600">Maternity Drive Stories</p>
-        </div>
-        <div class="reveal delay-3" style="background:linear-gradient(135deg,#0d1a0d,#1a3a1a);border-radius:var(--radius);aspect-ratio:16/9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;cursor:pointer;transition:var(--transition)" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform=''">
-          <div style="width:64px;height:64px;background:rgba(39,174,96,0.2);border:2px solid #27ae60;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#27ae60;font-size:1.6rem">▶</div>
-          <p style="color:rgba(255,255,255,0.8);font-size:0.9rem;font-weight:600">Plantation Drive — 1000 Trees</p>
-        </div>
-      </div>
-      <p style="text-align:center;color:var(--text-light);margin-top:24px;font-size:0.9rem">📸 Follow us on Instagram and YouTube for latest updates from the field.</p>
-    </div>
-  </section>
-
-  <!-- LIGHTBOX -->
-  <div id="lightbox">
-    <div class="lightbox-inner">
-      <button class="lightbox-close" id="lightboxClose">✕</button>
-      <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
-      <div class="lightbox-img" id="lightboxImg">🏥</div>
-      <p class="lightbox-caption" id="lightboxCaption"></p>
-      <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
+    <div class="gallery-full">
+      <div class="gf-item" data-cat="healthcare" data-cap="Free Health Camp – Rampur Village, UP"><img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=600&q=80" alt="Health camp" loading="lazy"/><div class="gf-cap"><span>Health Camp – Rampur Village</span></div></div>
+      <div class="gf-item" data-cat="maternal" data-cap="Maternity Drive – Shahjahanpur, 2025"><img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?auto=format&fit=crop&w=600&q=80" alt="Maternity drive" loading="lazy"/><div class="gf-cap"><span>Maternity Drive – Shahjahanpur</span></div></div>
+      <div class="gf-item" data-cat="animal" data-cap="Dog Rescue Operation – Bareilly City"><img src="https://images.unsplash.com/photo-1601758003122-53c40e686a19?auto=format&fit=crop&w=600&q=80" alt="Animal rescue" loading="lazy"/><div class="gf-cap"><span>Dog Rescue – Bareilly City</span></div></div>
+      <div class="gf-item" data-cat="trees" data-cap="Independence Day Plantation – 1000 Trees"><img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=600&q=80" alt="Tree plantation" loading="lazy"/><div class="gf-cap"><span>Independence Day Plantation</span></div></div>
+      <div class="gf-item" data-cat="healthcare" data-cap="Eye Screening Camp – Pilibhit District"><img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f1?auto=format&fit=crop&w=600&q=80" alt="Eye screening" loading="lazy"/><div class="gf-cap"><span>Eye Screening – Pilibhit</span></div></div>
+      <div class="gf-item" data-cat="volunteers" data-cap="Volunteer Training Day 2025"><img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=600&q=80" alt="Volunteers" loading="lazy"/><div class="gf-cap"><span>Volunteer Training Day 2025</span></div></div>
+      <div class="gf-item" data-cat="maternal" data-cap="Prenatal Check Camp – Budaun"><img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=600&q=80" alt="Prenatal camp" loading="lazy"/><div class="gf-cap"><span>Prenatal Check Camp – Budaun</span></div></div>
+      <div class="gf-item" data-cat="healthcare" data-cap="Child Health Drive – Lakhimpur"><img src="https://images.unsplash.com/photo-1518459031867-a89b944bffe4?auto=format&fit=crop&w=600&q=80" alt="Child health" loading="lazy"/><div class="gf-cap"><span>Child Health Drive – Lakhimpur</span></div></div>
+      <div class="gf-item" data-cat="animal" data-cap="Mass Vaccination Drive – Stray Animals"><img src="https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?auto=format&fit=crop&w=600&q=80" alt="Animal vaccination" loading="lazy"/><div class="gf-cap"><span>Mass Vaccination Drive</span></div></div>
+      <div class="gf-item" data-cat="trees" data-cap="School Green Program – 24 Schools"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=600&q=80" alt="School plantation" loading="lazy"/><div class="gf-cap"><span>School Green Program</span></div></div>
+      <div class="gf-item" data-cat="volunteers" data-cap="Annual Volunteer Meet – Bareilly 2025"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80" alt="Annual meet" loading="lazy"/><div class="gf-cap"><span>Annual Volunteer Meet 2025</span></div></div>
+      <div class="gf-item" data-cat="healthcare" data-cap="Blood Donation Camp – Moradabad"><img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=600&q=80" alt="Blood donation" loading="lazy"/><div class="gf-cap"><span>Blood Donation Camp – Moradabad</span></div></div>
     </div>
   </div>
+</section>
 
-  <!-- CTA + FOOTER -->
-  <section class="donate-cta">
-    <div class="container"><div class="donate-cta-inner"><div class="donate-cta-text"><h2>Be Part of the <span class="gradient-text">Next Story</span></h2><p>Join our next camp as a volunteer or fund the next health drive. Your presence matters.</p></div><div class="donate-cta-action"><a href="donate.html" class="btn-primary btn-large">Donate Now</a><a href="contact.html" class="btn-outline-white">Volunteer With Us</a></div></div></div>
-  </section>
+<!-- Lightbox -->
+<div id="lb">
+  <div class="lb-wrap">
+    <div class="lb-close" id="lbClose">✕</div>
+    <div class="lb-nav lb-prev" id="lbPrev">‹</div>
+    <img class="lb-img" id="lbImg" src="" alt=""/>
+    <p class="lb-cap" id="lbCap"></p>
+    <div class="lb-nav lb-next" id="lbNext">›</div>
+  </div>
+</div>
 
-  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="nav-brand" style="margin-bottom:1rem"><div class="brand-logo"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#2ecc71" stroke-width="2" opacity="0.4"/><path d="M24 4 A20 20 0 1 1 4 24 A15 15 0 1 0 24 4 Z" fill="#2ecc71"/></svg></div><div class="brand-text"><span class="brand-name">MOON</span><span class="brand-tagline">Foundation</span></div></div><p>Making Our Own Nation Healthy.</p><div class="social-links"><a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a></div></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html#healthcare">Rural Healthcare</a></li><li><a href="programs.html#maternal">Maternal & Child</a></li><li><a href="programs.html#animal">Animal Welfare</a></li><li><a href="programs.html#trees">Tree Plantation</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul class="contact-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bareilly, UP</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@moonfoundation.org</li></ul></div></div><div class="footer-bottom"><p>© 2026 MOON Foundation. All rights reserved.</p></div></div></footer>
+<section class="donate-banner"><div class="donate-banner-bg"></div><div class="donate-banner-overlay"></div><div class="container"><div class="donate-banner-inner"><div class="donate-banner-text"><h2>Be Part of the <span style="color:#4ade80">Next Story</span></h2><p>Join our next camp as a volunteer or fund the next health drive.</p></div><div class="donate-banner-btns"><a href="donate.html" class="btn btn-primary btn-lg">Donate Now</a><a href="contact.html" class="btn btn-outline-w btn-lg">Volunteer</a></div></div></div></section>
 
-  <button class="back-to-top" id="backToTop">↑</button>
-  <script src="js/main.js"></script>
-  <script>
-    // Gallery filter
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const items = document.querySelectorAll('.gallery-item');
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        items.forEach(item => {
-          const show = filter === 'all' || item.dataset.cat === filter;
-          item.style.display = show ? '' : 'none';
-        });
-      });
-    });
-
-    // Lightbox
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxCaption = document.getElementById('lightboxCaption');
-    let currentIndex = 0;
-    const visibleItems = () => [...items].filter(i => i.style.display !== 'none');
-
-    items.forEach((item, idx) => {
-      item.addEventListener('click', () => {
-        const vis = visibleItems();
-        currentIndex = vis.indexOf(item);
-        showLightbox(vis[currentIndex]);
-      });
-    });
-
-    function showLightbox(item) {
-      lightboxImg.textContent = item.dataset.emoji || item.textContent.trim().slice(0, 2);
-      lightboxCaption.textContent = item.dataset.caption || '';
-      lightbox.classList.add('open');
-    }
-
-    document.getElementById('lightboxClose').addEventListener('click', () => lightbox.classList.remove('open'));
-    lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('open'); });
-    document.getElementById('lightboxPrev').addEventListener('click', () => {
-      const vis = visibleItems();
-      currentIndex = (currentIndex - 1 + vis.length) % vis.length;
-      showLightbox(vis[currentIndex]);
-    });
-    document.getElementById('lightboxNext').addEventListener('click', () => {
-      const vis = visibleItems();
-      currentIndex = (currentIndex + 1) % vis.length;
-      showLightbox(vis[currentIndex]);
-    });
-    document.addEventListener('keydown', e => {
-      if (!lightbox.classList.contains('open')) return;
-      if (e.key === 'Escape') lightbox.classList.remove('open');
-      if (e.key === 'ArrowLeft') document.getElementById('lightboxPrev').click();
-      if (e.key === 'ArrowRight') document.getElementById('lightboxNext').click();
-    });
-  </script>
-</body>
-</html>
+<footer class="footer"><div class="container"><div class="footer-grid"><div><div class="footer-logo"><svg viewBox="0 0 36 36" fill="none" style="width:36px;height:36px"><circle cx="18" cy="18" r="17" fill="#16a34a" opacity=".15"/><path d="M18 3 A15 15 0 1 1 3 18 A11 11 0 1 0 18 3Z" fill="#16a34a"/></svg><div><span class="name">MOON Foundation</span><span class="tag">Making Our Own Nation Healthy</span></div></div><p>Bringing healthcare, compassion, and sustainability to every corner of India.</p><div class="socials"><a href="#" class="social-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a><a href="#" class="social-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg></a></div></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html#healthcare">Rural Healthcare</a></li><li><a href="programs.html#maternal">Maternal & Child</a></li><li><a href="programs.html#animal">Animal Welfare</a></li><li><a href="programs.html#trees">Tree Plantation</a></li></ul></div><div class="footer-col"><h4>Contact</h4><div class="footer-contact-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><span>Bareilly, UP 243001</span></div><div class="footer-contact-item"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><span>info@moonfoundation.org</span></div></div></div><div class="footer-bottom"><p>© 2026 MOON Foundation · Registered NGO</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">Annual Report</a></div></div></div></footer>
+<button id="btt"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M5 10l7-7 7 7M12 3v18"/></svg></button>
+<script src="js/main.js"></script>
+</body></html>
