@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate – MOON Foundation</title>
+  <meta name="description" content="Donate to MOON Foundation and directly fund rural healthcare, maternal care, animal welfare, and tree plantation across India. 80G tax benefits available." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <style>
+    .donate-hero { background:linear-gradient(135deg,#0d1b2a 0%,#1a3a28 100%);padding:160px 0 80px;text-align:center; }
+    .donate-main { padding:80px 0; }
+    .donate-grid { display:grid;grid-template-columns:1.5fr 1fr;gap:60px;align-items:start; }
+    .donate-form-card { background:#fff;border-radius:var(--radius);border:1px solid var(--border);padding:48px;box-shadow:var(--shadow-lg); }
+    .donate-sidebar { position:sticky;top:100px; }
+    .trust-card { background:var(--bg-light);border-radius:var(--radius);border:1px solid var(--border);padding:32px;margin-bottom:24px; }
+    .trust-row { display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border); }
+    .trust-row:last-child { border:none; }
+    .trust-icon { width:40px;height:40px;border-radius:10px;background:var(--green-light);display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0; }
+    .trust-row h5 { font-size:0.88rem;font-weight:700;color:var(--navy);margin-bottom:2px; }
+    .trust-row p { font-size:0.78rem;color:var(--text-light); }
+    .impact-preview { background:linear-gradient(135deg,var(--navy),#1a3a28);border-radius:var(--radius);padding:32px;color:#fff; }
+    .impact-preview h3 { font-size:1.1rem;font-weight:700;margin-bottom:20px;color:var(--green); }
+    .impact-row { display:flex;align-items:center;gap:12px;margin-bottom:12px;font-size:0.88rem;color:rgba(255,255,255,0.8); }
+    .impact-row span { font-weight:700;color:var(--green);min-width:60px; }
+    .step-badge { display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:var(--green);color:#fff;border-radius:50%;font-weight:700;font-size:0.82rem;flex-shrink:0; }
+    .upi-box { background:var(--bg-light);border:2px dashed var(--green);border-radius:var(--radius-sm);padding:24px;text-align:center;margin-top:16px; }
+    .upi-id { font-size:1.2rem;font-weight:800;color:var(--green-dark);letter-spacing:1px; }
+    @media(max-width:900px){.donate-grid{grid-template-columns:1fr}.donate-sidebar{position:static}}
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" class="scrolled">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand"><div class="brand-logo"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#2ecc71" stroke-width="2" opacity="0.4"/><path d="M24 4 A20 20 0 1 1 4 24 A15 15 0 1 0 24 4 Z" fill="#2ecc71"/></svg></div><div class="brand-text"><span class="brand-name">MOON</span><span class="brand-tagline">Foundation</span></div></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li>
+        <li class="dropdown"><a href="programs.html">Programs <span class="arrow">▾</span></a><ul class="dropdown-menu"><li><a href="programs.html#healthcare">Rural Healthcare</a></li><li><a href="programs.html#maternal">Maternal & Child</a></li><li><a href="programs.html#animal">Animal Welfare</a></li><li><a href="programs.html#trees">Tree Plantation</a></li></ul></li>
+        <li><a href="impact.html">Impact</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html" class="btn-donate active">Donate Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="donate-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Donate</div>
+      <h1>Make a <span class="gradient-text">Difference Today</span></h1>
+      <p style="color:rgba(255,255,255,0.7);font-size:1.05rem;max-width:600px;margin:0 auto">Your donation funds free healthcare, safe deliveries, animal rescue, and tree plantation for the people and beings who need it most.</p>
+      <div style="display:flex;justify-content:center;gap:32px;margin-top:40px;flex-wrap:wrap">
+        <div style="text-align:center"><div style="font-size:2rem;font-weight:800;color:var(--green)">₹500</div><div style="color:rgba(255,255,255,0.6);font-size:0.82rem">Medicines for 10 patients</div></div>
+        <div style="text-align:center"><div style="font-size:2rem;font-weight:800;color:var(--green)">₹1,000</div><div style="color:rgba(255,255,255,0.6);font-size:0.82rem">Plants 20 trees</div></div>
+        <div style="text-align:center"><div style="font-size:2rem;font-weight:800;color:var(--green)">₹2,500</div><div style="color:rgba(255,255,255,0.6);font-size:0.82rem">Full animal rescue & treatment</div></div>
+        <div style="text-align:center"><div style="font-size:2rem;font-weight:800;color:var(--green)">₹5,000</div><div style="color:rgba(255,255,255,0.6);font-size:0.82rem">Complete maternity care package</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DONATE FORM -->
+  <section class="donate-main">
+    <div class="container">
+      <div class="donate-grid">
+        <!-- FORM -->
+        <div>
+          <div class="donate-form-card">
+            <h2 style="color:var(--navy);margin-bottom:8px;font-size:1.5rem">Complete Your Donation</h2>
+            <p style="color:var(--text-light);font-size:0.88rem;margin-bottom:32px">All donations are 80G certified. You will receive an instant receipt via email.</p>
+
+            <form class="ajax-form" id="donateForm">
+              <!-- Step 1: Amount -->
+              <div style="margin-bottom:32px">
+                <label style="display:block;font-size:0.88rem;font-weight:700;color:var(--navy);margin-bottom:12px">
+                  <span class="step-badge">1</span> &nbsp; Choose Amount (₹)
+                </label>
+                <div class="donate-amounts">
+                  <button type="button" class="amount-btn" data-amount="500">₹500</button>
+                  <button type="button" class="amount-btn selected" data-amount="1000">₹1,000</button>
+                  <button type="button" class="amount-btn" data-amount="2500">₹2,500</button>
+                  <button type="button" class="amount-btn" data-amount="5000">₹5,000</button>
+                </div>
+                <div class="form-group" style="margin-top:12px;margin-bottom:0">
+                  <input type="number" id="customAmount" placeholder="Or enter custom amount (₹)" min="1" />
+                </div>
+              </div>
+
+              <!-- Step 2: Purpose -->
+              <div style="margin-bottom:32px">
+                <label style="display:block;font-size:0.88rem;font-weight:700;color:var(--navy);margin-bottom:12px">
+                  <span class="step-badge">2</span> &nbsp; Choose a Cause
+                </label>
+                <div class="donate-purpose">
+                  <button type="button" class="purpose-btn selected">🏥 Rural Healthcare</button>
+                  <button type="button" class="purpose-btn">👶 Maternal & Child</button>
+                  <button type="button" class="purpose-btn">🐾 Animal Welfare</button>
+                  <button type="button" class="purpose-btn">🌳 Tree Plantation</button>
+                </div>
+                <p style="font-size:0.78rem;color:var(--text-light);margin-top:8px">Or leave it to us to direct funds where they're needed most.</p>
+              </div>
+
+              <!-- Step 3: Donor Details -->
+              <div style="margin-bottom:32px">
+                <label style="display:block;font-size:0.88rem;font-weight:700;color:var(--navy);margin-bottom:16px">
+                  <span class="step-badge">3</span> &nbsp; Your Details
+                </label>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="donorName">Full Name *</label>
+                    <input type="text" id="donorName" required placeholder="As per PAN card" />
+                  </div>
+                  <div class="form-group">
+                    <label for="donorPhone">Phone *</label>
+                    <input type="tel" id="donorPhone" required placeholder="+91" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="donorEmail">Email Address *</label>
+                  <input type="email" id="donorEmail" required placeholder="for receipt & certificate" />
+                </div>
+                <div class="form-group">
+                  <label for="donorPAN">PAN Card Number (for 80G receipt)</label>
+                  <input type="text" id="donorPAN" placeholder="ABCDE1234F" maxlength="10" style="text-transform:uppercase" />
+                </div>
+                <div class="form-group">
+                  <label for="donorAddress">Address (optional)</label>
+                  <input type="text" id="donorAddress" placeholder="For 80G certificate" />
+                </div>
+              </div>
+
+              <!-- Step 4: Payment -->
+              <div style="margin-bottom:28px">
+                <label style="display:block;font-size:0.88rem;font-weight:700;color:var(--navy);margin-bottom:16px">
+                  <span class="step-badge">4</span> &nbsp; Payment Method
+                </label>
+                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px">
+                  <label style="display:flex;align-items:center;gap:8px;padding:14px;border:2px solid var(--green);border-radius:var(--radius-sm);cursor:pointer;background:var(--green-light)">
+                    <input type="radio" name="payMethod" value="upi" checked style="accent-color:var(--green)"/>
+                    <span style="font-weight:600;font-size:0.88rem;color:var(--green-dark)">UPI</span>
+                  </label>
+                  <label style="display:flex;align-items:center;gap:8px;padding:14px;border:2px solid var(--border);border-radius:var(--radius-sm);cursor:pointer">
+                    <input type="radio" name="payMethod" value="netbanking" style="accent-color:var(--green)"/>
+                    <span style="font-weight:600;font-size:0.88rem;color:var(--text)">Net Banking</span>
+                  </label>
+                  <label style="display:flex;align-items:center;gap:8px;padding:14px;border:2px solid var(--border);border-radius:var(--radius-sm);cursor:pointer">
+                    <input type="radio" name="payMethod" value="card" style="accent-color:var(--green)"/>
+                    <span style="font-weight:600;font-size:0.88rem;color:var(--text)">Card</span>
+                  </label>
+                </div>
+
+                <div class="upi-box">
+                  <p style="font-size:0.82rem;color:var(--text-light);margin-bottom:8px">UPI ID / Scan & Pay</p>
+                  <div class="upi-id">moonfoundation@upi</div>
+                  <p style="font-size:0.75rem;color:var(--text-light);margin-top:8px">Google Pay · PhonePe · Paytm · BHIM · Any UPI App</p>
+                  <div style="margin-top:16px;padding:16px;background:#fff;border-radius:var(--radius-sm);display:inline-flex;flex-direction:column;align-items:center;gap:8px">
+                    <div style="width:80px;height:80px;background:linear-gradient(135deg,#0d1b2a,#1a2f20);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--green);font-size:2.5rem">📱</div>
+                    <span style="font-size:0.75rem;color:var(--text-light)">Scan QR Code</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bank Details -->
+              <details style="margin-bottom:28px">
+                <summary style="font-size:0.9rem;font-weight:600;color:var(--navy);cursor:pointer;padding:12px 0;border-top:1px solid var(--border)">
+                  🏦 Bank Transfer Details (NEFT / RTGS / IMPS)
+                </summary>
+                <div style="background:var(--bg-light);border-radius:var(--radius-sm);padding:20px;margin-top:12px;font-size:0.88rem">
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                    <div><div style="color:var(--text-light);font-size:0.78rem">Account Name</div><div style="font-weight:700;color:var(--navy)">MOON Foundation</div></div>
+                    <div><div style="color:var(--text-light);font-size:0.78rem">Account Number</div><div style="font-weight:700;color:var(--navy)">1234567890123</div></div>
+                    <div><div style="color:var(--text-light);font-size:0.78rem">IFSC Code</div><div style="font-weight:700;color:var(--navy)">SBIN0001234</div></div>
+                    <div><div style="color:var(--text-light);font-size:0.78rem">Bank</div><div style="font-weight:700;color:var(--navy)">State Bank of India</div></div>
+                    <div style="grid-column:1/-1"><div style="color:var(--text-light);font-size:0.78rem">Branch</div><div style="font-weight:700;color:var(--navy)">Civil Lines, Bareilly, UP</div></div>
+                  </div>
+                </div>
+              </details>
+
+              <div style="padding:16px;background:var(--green-light);border-radius:var(--radius-sm);margin-bottom:24px;font-size:0.85rem;color:var(--green-dark)">
+                🔒 Your information is encrypted and secure. You will receive an 80G certificate within 7 working days.
+              </div>
+
+              <button type="submit" class="btn-primary btn-large" style="width:100%;justify-content:center;font-size:1.05rem">
+                Donate Now – ₹1,000 →
+              </button>
+              <p style="text-align:center;font-size:0.78rem;color:var(--text-light);margin-top:12px">80G certified · Tax deductible · Transparent utilisation</p>
+            </form>
+            <div class="form-success">
+              <div style="font-size:3.5rem;margin-bottom:16px">🌙</div>
+              <h3 style="color:var(--navy);margin-bottom:8px">Thank You for Your Generosity!</h3>
+              <p style="color:var(--text-light);font-size:0.95rem;max-width:380px;margin:0 auto">Your donation will directly fund healthcare, maternity care, animal welfare, and tree plantation. You'll receive a receipt and 80G certificate by email.</p>
+              <div style="margin-top:28px"><a href="index.html" class="btn-primary">Back to Home</a></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="donate-sidebar">
+          <div class="trust-card">
+            <h3 style="color:var(--navy);margin-bottom:20px;font-size:1.05rem">Why Donate to MOON?</h3>
+            <div class="trust-row"><div class="trust-icon">✅</div><div><h5>80G Tax Benefit</h5><p>Donations are eligible for income tax deduction</p></div></div>
+            <div class="trust-row"><div class="trust-icon">🔍</div><div><h5>Full Transparency</h5><p>Annual audited reports publicly available</p></div></div>
+            <div class="trust-row"><div class="trust-icon">🎯</div><div><h5>Direct Impact</h5><p>78% of funds go directly to programs</p></div></div>
+            <div class="trust-row"><div class="trust-icon">📧</div><div><h5>Instant Receipt</h5><p>Email receipt sent immediately</p></div></div>
+            <div class="trust-row"><div class="trust-icon">🏛️</div><div><h5>Registered NGO</h5><p>Societies Registration Act, 1860</p></div></div>
+          </div>
+
+          <div class="impact-preview">
+            <h3>Your Impact at a Glance</h3>
+            <div class="impact-row"><span>₹500</span> → Medicines for 10 patients</div>
+            <div class="impact-row"><span>₹1,000</span> → 20 trees + 1 month care</div>
+            <div class="impact-row"><span>₹1,500</span> → Prenatal kit for 1 mother</div>
+            <div class="impact-row"><span>₹2,000</span> → Animal rescue + treatment</div>
+            <div class="impact-row"><span>₹5,000</span> → Full maternity package</div>
+            <div class="impact-row"><span>₹10,000</span> → Sponsor 1 health camp day</div>
+          </div>
+
+          <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-top:24px;text-align:center">
+            <p style="font-size:0.88rem;color:var(--text-light);margin-bottom:8px">Need help with your donation?</p>
+            <a href="tel:+919876543210" style="font-weight:700;color:var(--green-dark);font-size:1rem">+91 98765 43210</a>
+            <p style="font-size:0.78rem;color:var(--text-light);margin-top:4px">Mon–Sat, 9 AM–6 PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECURRING DONATION -->
+  <section class="section-pad bg-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">Sustain the Mission</span>
+        <h2>Become a <span class="gradient-text">Monthly Donor</span></h2>
+        <p>A small monthly commitment creates a steady stream of impact. Cancel anytime.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+        <div class="pillar-card reveal delay-1" style="text-align:left">
+          <div class="pillar-icon-wrap" style="--c:#2ecc71;margin:0 0 20px 0"><svg viewBox="0 0 48 48" fill="none"><path d="M24 8 Q36 16 36 28 A12 12 0 0 1 12 28 Q12 16 24 8Z" fill="currentColor"/></svg></div>
+          <div style="font-size:2rem;font-weight:800;color:var(--navy)">₹200<span style="font-size:1rem;font-weight:400;color:var(--text-light)">/mo</span></div>
+          <h3 style="margin-top:4px">Health Supporter</h3>
+          <p>Provides medicines for 4 patients every month. Your green thumb sustains village health.</p>
+          <a href="contact.html" class="btn-outline" style="margin-top:16px;display:inline-block">Start Monthly →</a>
+        </div>
+        <div class="pillar-card reveal delay-2" style="text-align:left;border-color:var(--green);box-shadow:var(--shadow-lg)">
+          <div style="background:var(--green);color:#fff;font-size:0.75rem;font-weight:700;padding:4px 14px;border-radius:100px;margin-bottom:16px;display:inline-block">MOST POPULAR</div>
+          <div class="pillar-icon-wrap" style="--c:#e74c8b;margin:0 0 20px 0"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="16" r="10" fill="currentColor"/><ellipse cx="24" cy="36" rx="14" ry="8" fill="currentColor" opacity="0.4"/></svg></div>
+          <div style="font-size:2rem;font-weight:800;color:var(--navy)">₹500<span style="font-size:1rem;font-weight:400;color:var(--text-light)">/mo</span></div>
+          <h3 style="margin-top:4px">Community Champion</h3>
+          <p>Funds prenatal care for one mother per month + 10 trees per year. Powerful sustained impact.</p>
+          <a href="contact.html" class="btn-primary" style="margin-top:16px;display:inline-block">Start Monthly →</a>
+        </div>
+        <div class="pillar-card reveal delay-3" style="text-align:left">
+          <div class="pillar-icon-wrap" style="--c:#f39c12;margin:0 0 20px 0"><svg viewBox="0 0 48 48" fill="none"><path d="M24 6l4.5 9 10 1.5-7.2 7 1.7 10L24 29l-9 4.5 1.7-10L9.5 16.5l10-1.5z" fill="currentColor"/></svg></div>
+          <div style="font-size:2rem;font-weight:800;color:var(--navy)">₹2,000<span style="font-size:1rem;font-weight:400;color:var(--text-light)">/mo</span></div>
+          <h3 style="margin-top:4px">Impact Leader</h3>
+          <p>Sponsors a full village health day annually. Your name appears in our Impact Donor wall.</p>
+          <a href="contact.html" class="btn-outline" style="margin-top:16px;display:inline-block">Start Monthly →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="nav-brand" style="margin-bottom:1rem"><div class="brand-logo"><svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" stroke="#2ecc71" stroke-width="2" opacity="0.4"/><path d="M24 4 A20 20 0 1 1 4 24 A15 15 0 1 0 24 4 Z" fill="#2ecc71"/></svg></div><div class="brand-text"><span class="brand-name">MOON</span><span class="brand-tagline">Foundation</span></div></div><p>Making Our Own Nation Healthy.</p><div class="social-links"><a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#" class="social-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a></div></div><div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="programs.html">Programs</a></li><li><a href="impact.html">Impact</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-col"><h4>Programs</h4><ul><li><a href="programs.html#healthcare">Rural Healthcare</a></li><li><a href="programs.html#maternal">Maternal & Child</a></li><li><a href="programs.html#animal">Animal Welfare</a></li><li><a href="programs.html#trees">Tree Plantation</a></li></ul></div><div class="footer-col"><h4>Contact</h4><ul class="contact-list"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Bareilly, UP</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@moonfoundation.org</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>+91 98765 43210</li></ul></div></div><div class="footer-bottom"><p>© 2026 MOON Foundation. All rights reserved. | 80G Registered | Transparent & Accountable</p><div class="footer-bottom-links"><a href="#">Privacy Policy</a><a href="#">80G Certificate</a></div></div></div></footer>
+
+  <button class="back-to-top" id="backToTop">↑</button>
+  <script src="js/main.js"></script>
+  <script>
+    // Update donate button amount display
+    const amountBtns = document.querySelectorAll('.amount-btn');
+    const customInput = document.getElementById('customAmount');
+    const submitBtn = document.querySelector('#donateForm [type=submit]');
+    let selectedAmount = 1000;
+
+    function updateBtn() {
+      const amt = customInput.value ? parseInt(customInput.value) : selectedAmount;
+      if (submitBtn) submitBtn.textContent = `Donate Now – ₹${amt.toLocaleString('en-IN')} →`;
+    }
+
+    amountBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        selectedAmount = parseInt(btn.dataset.amount);
+        updateBtn();
+      });
+    });
+    customInput?.addEventListener('input', updateBtn);
+    updateBtn();
+  </script>
+</body>
+</html>
